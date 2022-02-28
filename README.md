@@ -12,7 +12,7 @@ Capstone 2 Proposal
 
 Goals -
 
-- Create a simple ecommerce site using the PERN stack (I will also be researching MongoDB while building this, so may convert to MERN, but likely will just stick with Postgresql to save time).  It will have user authentication and protected routes.  There will be a landing page, shop directory, category pages, individual product view and more.  There will be a wishlist, shopping cart and checkout.  Logged in users can see past orders, leave reviews, change user information and preferences, etc.  Basic CMS that allows admin to add/edit/delete products.
+- Create a simple ecommerce site using the MERN stack.  It will have user authentication and protected routes.  There will be a landing page, shop directory, category pages, individual product view and more.  There will be a wishlist, shopping cart and checkout.  Logged in users can see past orders, leave reviews, change user information and preferences, etc.  Basic CMS that allows admin to add/edit/delete products.
 
 - User can sign up, log in, log out, delete account, change account details, add and remove addresses...
 
@@ -33,6 +33,8 @@ Stretch -
 - Shipping information. Include dynamic shipping costs in the price (Stretch).
 
 APIs -
+
+- Custom built API to handle products -- built with MongoDB
 
 - Stripe payments/Paypal -- will be test (not live) versions, as there will be no real products to ship
 
