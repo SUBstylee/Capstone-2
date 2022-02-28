@@ -24,14 +24,6 @@ Goals -
 
 - I would like to make a content management page, and if a user has admin privileges, then they can add items, change item details, etc.  Perhaps putting a toggle for admin to make other users admin, or just log into admin account when showing page to others to prevent too much manipulation of products (could cause problems with Heroku database limitations, or again, keep product data in JSON file).  For people just browsing the site, perhaps in the info/about page I will include a short video about the features of the site, so a casual viewer can get all the info about the site in a short amount of time.  Can contact me if they want to login as admin.
 
-- TBD:
-
-  - ~~Name of site/shop (Have to consider this, especially if I reach stretch goal of multiple languages)~~
-
-  - Color scheme/general design (Could be affected by name and product direction.  Will likely go with minimalistic high contrast color scheme)
-
-  - Products (Most likely will do apparel as free use images in this category are abundant.  May consult others on what they think would be good)
-
 Stretch -
 
 - Multiple languages.  Have option to change between English and Chinese (Stretch).
