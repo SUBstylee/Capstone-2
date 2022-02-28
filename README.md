@@ -5,6 +5,7 @@
 ### TOTALLY AWESOME APPAREL
 
 ![TAA Header](./logos/TAA-header-color.png)
+
 ![TAA logo black and white](./logos/TAA-Logo-black-and-white.png)
 ![TAA logo color](./logos/TAA-logo-color.png)
 
