@@ -38,7 +38,7 @@ Stretch -
 
 - Live chat. Have a live chat.  If admin is logged in, can talk with customers, otherwise maybe have some automated responses (Stretch).
 
-- Shipping information. Include shipping costs in the price (Stretch).
+- Shipping information. Include dynamic shipping costs in the price (Stretch).
 
 APIs -
 
