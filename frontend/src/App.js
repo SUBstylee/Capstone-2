@@ -7,21 +7,22 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 
 import { Route, Routes } from "react-router-dom";
 
-const App=()=> {
+const App = () => {
   return (
     <div className="App">
-    <Header />
-    <main className="py-3">
-      <Container>
-     <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/products/:id" element={<ProductDetails/>}/>
-     </Routes>
-     <Footer />
-     </Container>
-    </main>
+      <Header />
+      <main className="py-3">
+        <Container>
+          <h1>Welcome to Totally Awesome Apparel</h1>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+          </Routes>
+          <Footer />
+        </Container>
+      </main>
     </div>
-    
+
   );
 }
 

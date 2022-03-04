@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Rating"
+  >
+    <span>
+      <i
+        class="fa-solid fa-star"
+        style="color: rgb(238, 188, 29);"
+      />
+    </span>
+    <span>
+      <i
+        class="fa-solid fa-star"
+        style="color: rgb(238, 188, 29);"
+      />
+    </span>
+    <span>
+      <i
+        class="fa-solid fa-star"
+        style="color: rgb(238, 188, 29);"
+      />
+    </span>
+    <span>
+      <i
+        class="fa-solid fa-star"
+        style="color: rgb(238, 188, 29);"
+      />
+    </span>
+    <span>
+      <i
+        class="fa-solid fa-star"
+        style="color: rgb(238, 188, 29);"
+      />
+    </span>
+    <span
+      class="ps-2"
+    >
+      1 review
+    </span>
+  </div>
+</DocumentFragment>
+`;
