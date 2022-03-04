@@ -1,32 +1,37 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../../components/Rating/Rating";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import Loader from "../../components/Loader/Loader";
+import Message from "../../components/Message/Message";
+import { useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
+import { listProductDetails } from "../../actions/productActions";
 
-const ProductDetails = () => {
-  const [product, setProduct] = useState({});
-  const match = useParams();
+const ProductDetails = ({match}) => {
+  const dispatch=useDispatch();
+  const {id}=useParams();
   const navigate = useNavigate();
+  const productDetails=useSelector(state=>state.productDetails);
+  const {loading,error,product}=productDetails;
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const { data } = await axios.get(`/api/products/${match.id}`);
-      setProduct(data);
-    };
-    fetchProduct();
-  }, []);
-
-  // const product = products.find((p) => p._id === match.id);
+    dispatch(listProductDetails(id));
+  }, [dispatch]);
+  
   return (
     <div className='ProductDetails'>
       <button
         className='btn btn-light'
         onClick={() => (navigate(-1) ? navigate(-1) : navigate("/"))}
       >
-        Go Back!!
+        Go Back
       </button>
-      <Row>
+      {loading?(
+        <Loader/>
+      ):error?(
+        <Message variant='danger'>{error}</Message>
+      ):(
+        <Row>
         <Col md={6}>
           <Image src={product.image} alt={product.name} fluid />
         </Col>
@@ -81,6 +86,7 @@ const ProductDetails = () => {
           </Card>
         </Col>
       </Row>
+      )}
     </div>
   );
 };

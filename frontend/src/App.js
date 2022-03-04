@@ -1,11 +1,11 @@
 import { Container } from "react-bootstrap";
+import { Route, Routes } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-
-import { Route, Routes } from "react-router-dom";
+import Loader from "./components/Loader/Loader";
 
 const App = () => {
   return (
@@ -13,7 +13,6 @@ const App = () => {
       <Header />
       <main className="py-3">
         <Container>
-          <h1>Welcome to Totally Awesome Apparel</h1>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products/:id" element={<ProductDetails />} />
