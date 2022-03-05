@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="Footer"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="text-center py-3 col"
+        >
+          Copyright © Totally Awesome Apparel
+        </div>
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
