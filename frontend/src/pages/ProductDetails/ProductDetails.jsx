@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { listProductDetails } from "../../actions/productActions";
 
-const ProductDetails = ({match}) => {
-  const [qty,setQty]=useState(0);
+const ProductDetails = () => {
+  const [qty,setQty]=useState(1);
 
   const dispatch=useDispatch();
   const {id}=useParams();
@@ -20,6 +20,10 @@ const ProductDetails = ({match}) => {
     dispatch(listProductDetails(id));
   }, [dispatch]);
   
+  const addToCartHandler=()=>{
+    navigate(`/cart/${id}?qty=${qty}`);
+  };
+
   return (
     <div className='ProductDetails'>
       <button
@@ -90,6 +94,7 @@ const ProductDetails = ({match}) => {
                   className='btn-block'
                   type='button'
                   disabled={product.countInStock === 0}
+                  onClick={addToCartHandler}
                 >
                   {product.countInStock === 0 ? (
                     <del>Add to cart</del>

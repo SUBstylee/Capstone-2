@@ -5,7 +5,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import Loader from "./components/Loader/Loader";
+import Cart from "./pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -16,6 +16,10 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path='/cart'>
+              <Route path=":id" element={<Cart />} />
+              <Route path="" element={<Cart />} />
+            </Route>
           </Routes>
           <Footer />
         </Container>
@@ -23,6 +27,6 @@ const App = () => {
     </div>
 
   );
-}
+};
 
 export default App;
