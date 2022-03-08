@@ -6,6 +6,8 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import Cart from "./pages/Cart/Cart";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 const App = () => {
   return (
@@ -17,13 +19,15 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route path='/cart'>
               <Route path=":id" element={<Cart />} />
               <Route path="" element={<Cart />} />
             </Route>
           </Routes>
-          <Footer />
         </Container>
+        <Footer />
       </main>
     </div>
 
