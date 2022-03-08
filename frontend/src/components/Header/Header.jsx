@@ -9,7 +9,7 @@ const Header = () => {
   const userLogin=useSelector(state=>state.userLogin);
   const {userInfo}=userLogin;
   const cart = useSelector((state) => state.cart);
-  const cartLength = cart.cartItems.length;
+  const cartLength = cart.cartItems.reduce((prevValue,currentValue)=>prevValue+currentValue.qty,0);
   const dispatch=useDispatch();
   const cartColor= cartLength===0?'#fc917e':'#98cef9';
 

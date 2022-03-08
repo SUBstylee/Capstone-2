@@ -27,8 +27,8 @@ const App = () => {
             </Route>
           </Routes>
         </Container>
-        <Footer />
       </main>
+      <Footer />
     </div>
 
   );
