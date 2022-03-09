@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <header
+      class="Header"
+    >
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light"
+      >
+        <a
+          class="active navbar-brand"
+          href="/"
+        >
+          <img
+            alt="Totally Awesome Apparel Logo"
+            class="ps-2"
+            height="36"
+            src="TAA-header-color-transparent.png"
+          />
+        </a>
+        <div
+          class="container"
+        >
+          <button
+            aria-controls="basic-navbar-nav"
+            aria-label="Toggle navigation"
+            class="navbar-toggler collapsed"
+            type="button"
+          >
+            <span
+              class="navbar-toggler-icon"
+            />
+          </button>
+          <div
+            class="navbar-collapse collapse"
+            id="basic-navbar-nav"
+          >
+            <div
+              class="ms-auto navbar-nav"
+            >
+              <a
+                class="nav-link"
+                data-rr-ui-event-key="/cart"
+                href="/cart"
+              >
+                <i
+                  class="fa-solid fa-cart-shopping"
+                />
+                 Cart
+              </a>
+              <a
+                class="nav-link"
+                data-rr-ui-event-key="/login"
+                href="/login"
+              >
+                <i
+                  class="fa-solid fa-right-to-bracket"
+                />
+                 Sign In
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <h1>
+      Welcome to Totally Awesome Apparel
+    </h1>
+    <main
+      class="py-3"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="Home"
+        >
+          <h1>
+            Latest Products
+          </h1>
+          <div
+            class="Loader"
+          >
+            <span
+              class="sr-only"
+            >
+              Loading...
+            </span>
+          </div>
+        </div>
+        <footer
+          class="Footer"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="text-center py-3 col"
+              >
+                Copyright © Totally Awesome Apparel
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+</DocumentFragment>
+`;

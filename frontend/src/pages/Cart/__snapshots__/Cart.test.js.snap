@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Cart"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-8"
+      >
+        <h1>
+          Shopping Cart
+        </h1>
+        <div
+          class="fade alert alert-info show"
+          role="alert"
+        >
+          No items in cart. 
+          <a
+            class="back"
+            href="/"
+          >
+            <u>
+              Go Back
+            </u>
+          </a>
+        </div>
+      </div>
+      <div
+        class="col-md-4"
+      >
+        <div
+          class="card"
+        >
+          <div
+            class="list-group list-group-flush"
+          >
+            <div
+              class="list-group-item"
+            >
+              <h2>
+                Subtotal (0) items
+              </h2>
+              $0.00
+            </div>
+            <div
+              class="list-group-item"
+            >
+              <button
+                class="btn-block btn btn-primary"
+                disabled=""
+                type="button"
+              >
+                <del>
+                  Proceed to Checkout
+                </del>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
