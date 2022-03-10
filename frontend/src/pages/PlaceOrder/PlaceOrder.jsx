@@ -22,19 +22,19 @@ const PlaceOrder = () => {
     useEffect(()=>{
         if(success){
             navigate(`/order/${order._id}`);
-        }
+        };
         // eslint-disable-next-line
     },[navigate,success]);
 
     const placeOrderHandler=()=>{
         dispatch(createOrder({
-            orderItems:cart.cartItems,
+            orderItems: cart.cartItems,
             shippingAddress: cart.shippingAddress,
-            paymentMethod:cart.paymentMethod,
-            itemsPrice:cart.itemsPrice,
-            shippingPrice:cart.shippingPrice,
-            taxPrice:cart.taxPrice,
-            totalPrice:cart.totalPrice,
+            paymentMethod: cart.paymentMethod,
+            itemsPrice: cart.itemsPrice,
+            shippingPrice: cart.shippingPrice,
+            taxPrice: cart.taxPrice,
+            totalPrice: cart.totalPrice,
         }));
     };
 

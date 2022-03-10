@@ -10,15 +10,14 @@ export const createOrder = (order) => async (dispatch, getState) => {
         const config = {
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${userInfo.token}`
+                Authorization: `Bearer ${userInfo.token}`,
             }
         };
         const { data } = await axios.post('/api/orders', order, config);
         dispatch({
             type: ORDER_CREATE_SUCCESS,
-            payload: data
+            payload: data,
         });
-        localStorage.setItem('userInfo', JSON.stringify(data));
     } catch (error) {
         dispatch({
             type: ORDER_CREATE_FAIL,
