@@ -1,20 +1,41 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { useNavigate,Link } from "react-router-dom";
 import {Button,Row,Col,ListGroup,Image,Card} from 'react-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
+import { createOrder } from "../../actions/orderActions";
 
 const PlaceOrder = () => {
+    const dispatch=useDispatch();
+    const navigate=useNavigate();
     const cart=useSelector(state=>state.cart);
     //calc prices
-    cart.subtotal=cart.cartItems.reduce((acc,item)=>acc+item.price*item.qty,0);
-    cart.shippingPrice=cart.subtotal>=100?0.00:10.00;
-    cart.taxPrice=Number(0.12*cart.subtotal);
-    cart.totalPrice=(Number(cart.subtotal)+Number(cart.shippingPrice)+cart.taxPrice);
+    cart.orderItems=cart.cartItems.reduce((acc,item)=>acc+item.price*item.qty,0);
+    cart.shippingPrice=cart.orderItems>=100?0.00:10.00;
+    cart.taxPrice=Number(0.12*cart.orderItems);
+    cart.totalPrice=(Number(cart.orderItems)+Number(cart.shippingPrice)+cart.taxPrice);
+
+    const orderCreate=useSelector(state=>state.orderCreate);
+    const {order,success,error}=orderCreate;
+
+    useEffect(()=>{
+        if(success){
+            navigate(`/order/${order._id}`);
+        }
+        // eslint-disable-next-line
+    },[navigate,success]);
 
     const placeOrderHandler=()=>{
-        console.log('order placed');
+        dispatch(createOrder({
+            orderItems:cart.cartItems,
+            shippingAddress: cart.shippingAddress,
+            paymentMethod:cart.paymentMethod,
+            itemsPrice:cart.itemsPrice,
+            shippingPrice:cart.shippingPrice,
+            taxPrice:cart.taxPrice,
+            totalPrice:cart.totalPrice,
+        }));
     };
 
     return (
@@ -71,7 +92,7 @@ const PlaceOrder = () => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Subtotal</Col>
-                                    <Col>${cart.subtotal.toFixed(2)}</Col>
+                                    <Col>${cart.orderItems.toFixed(2)}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
@@ -91,6 +112,9 @@ const PlaceOrder = () => {
                                     <Col>Total</Col>
                                     <Col><strong>${cart.totalPrice.toFixed(2)}</strong></Col>
                                 </Row>
+                            </ListGroup.Item>
+                            <ListGroup.Item>
+                                {error&&<Message variant='danger'>{error}</Message>}
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Button type='button' className="btn-block" disabled={cart.cartItems.length===0} onClick={placeOrderHandler}>{cart.cartItems.length===0?(<del>Place Order</del>):('Place Order')}</Button>

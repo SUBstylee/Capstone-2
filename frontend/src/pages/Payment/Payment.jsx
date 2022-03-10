@@ -34,8 +34,8 @@ const Payment = () => {
                         <Form.Label as='legend'>Select Method</Form.Label>
                         <Row>
                         <Col className="payment-icons" xs={1}>
-                            <label htmlFor="PayPal"><i class="fa-brands fa-paypal"></i></label><br/>
-                            <label htmlFor="Stripe"><i class="fa-brands fa-stripe-s"></i></label>
+                            <label htmlFor="PayPal"><i className="fa-brands fa-paypal"></i></label><br/>
+                            <label htmlFor="Stripe"><i className="fa-brands fa-stripe-s"></i></label>
                         </Col>
                         <Col xs={2}>
                             <Form.Check type='radio' label='PayPal' id='PayPal' name='paymentMethod' value='PayPal' checked onChange={(e)=>setPaymentMethod(e.target.value)}></Form.Check>
