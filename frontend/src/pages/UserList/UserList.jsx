@@ -1,5 +1,5 @@
-import { useState,useEffect } from "react";
-import { Link,useNavigate,useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {Table,Button} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
@@ -54,8 +54,8 @@ const UserList = () => {
                                 <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
                                 <td>{user.isAdmin?(<i className="fa-solid fa-circle-check" style={{color:'green'}}></i>):(<i className="fa-solid fa-circle-xmark" style={{color:'red'}}></i>)}</td>
                                 <td>
-                                    <LinkContainer style={{marginRight:'5px'}} to={`/user/${user._id}/edit`}><Button variant='light' className="btn-sm"><i className="fa-solid fa-user-pen"></i></Button></LinkContainer>
-                                    <Button style={{marginLeft:'5px'}} variant='danger' className="btn-sm" onClick={()=>deleteHandler(user._id)}><i className="fa-solid fa-ban"></i></Button>
+                                    <LinkContainer style={{marginRight:'5px'}} to={`/admin/user/${user._id}/edit`}><Button variant='light' className="btn-sm"><i className="fa-solid fa-user-pen"></i></Button></LinkContainer>
+                                    <Button disabled={userInfo._id === user._id} style={{marginLeft:'5px'}} variant='danger' className="btn-sm" onClick={()=>deleteHandler(user._id)}><i className="fa-solid fa-ban"></i></Button>
                                 </td>
                             </tr>
                         ))}
