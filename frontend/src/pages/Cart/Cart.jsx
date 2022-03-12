@@ -58,7 +58,7 @@ const Cart = () => {
                         </Form.Control> 
                       </Col> 
                       <Col md={2}>
-                        <Button type='button' variant='light' onClick={()=>removeFromCartHandler(item.product)}><i className="fa-solid fa-ban"></i></Button> 
+                        <Button type='button' variant='danger' onClick={()=>removeFromCartHandler(item.product)}><i className="fa-solid fa-ban"></i></Button> 
                       </Col> 
                     </Row>  
                   </ListGroup.Item>
