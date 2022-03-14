@@ -9,7 +9,10 @@ import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Profile from "./pages/Profile/Profile";
-
+import Shipping from "./pages/Shipping/Shipping";
+import Payment from "./pages/Payment/Payment";
+import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
+import Order from "./pages/Order/Order";
 const App = () => {
   return (
     <div className="App">
@@ -23,6 +26,10 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/placeorder" element={<PlaceOrder />} />
+            <Route path="/order/:id" element={<Order />} />
             <Route path='/cart'>
               <Route path=":id" element={<Cart />} />
               <Route path="" element={<Cart />} />
