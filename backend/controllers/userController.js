@@ -81,6 +81,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
         user.name = req.body.name || user.name;
         user.email = req.body.email || user.email;
         if (req.body.password) {
+            //will encrypt password from userModel
             user.password = req.body.password;
         };
         const updatedUser = await user.save();
