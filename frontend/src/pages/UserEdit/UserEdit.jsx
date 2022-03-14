@@ -25,19 +25,23 @@ const UserEdit = () => {
     const {id}=useParams();
 
     useEffect(()=>{
-        if(successUpdate){
-            dispatch({type:USER_UPDATE_RESET});
-            navigate('/admin/userlist');
+        if(!userInfo||!userInfo.isAdmin){
+            navigate('/login');
         }else{
-            if(!user.name||user._id !== id){
-                dispatch(getUserDetails(id));
+            if(successUpdate){
+                dispatch({type:USER_UPDATE_RESET});
+                navigate('/admin/userlist');
             }else{
-                setName(user.name);
-                setEmail(user.email);
-                setIsAdmin(user.isAdmin);
-            };
-        };        
-    },[id,user,dispatch,successUpdate,navigate]);
+                if(!user.name||user._id !== id){
+                    dispatch(getUserDetails(id));
+                }else{
+                    setName(user.name);
+                    setEmail(user.email);
+                    setIsAdmin(user.isAdmin);
+                };
+            };  
+        };      
+    },[id,user,dispatch,successUpdate,navigate,userInfo]);
     
     const submitHandler=(e)=>{
         e.preventDefault();
@@ -62,7 +66,7 @@ const UserEdit = () => {
                     <Form.Control type='email' autoComplete="current-email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}></Form.Control>
                 </Form.Group>    
                 <Form.Group controlId='isAdmin'>  
-                    <Form.Check disabled={userInfo._id === user._id} type='checkbox' label='Is Admin' checked={isAdmin} onChange={(e)=>setIsAdmin(e.target.checked)}></Form.Check>
+                    <Form.Check disabled={userInfo?userInfo._id === user._id:false} type='checkbox' label='Is Admin' checked={isAdmin} onChange={(e)=>setIsAdmin(e.target.checked)}></Form.Check>
                 </Form.Group>
                 <Button className="my-2" type='submit' variant="primary">
                     Update
