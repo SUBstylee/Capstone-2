@@ -24,7 +24,6 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <h1>Welcome to Totally Awesome Apparel</h1>
       <main className="py-3">
         <Container>
           <Routes>

@@ -2,7 +2,7 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 
-import './Footer.scss'
+import './Footer.scss';
 
 const Footer = () => {
   return (

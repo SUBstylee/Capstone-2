@@ -20,7 +20,7 @@ const SearchList = () => {
 
   return (
     <div className='SearchList'>
-      <h1>Search Results</h1>
+      <h1>Search Results for '{keyword}':</h1>
       {loading?(
         <Loader/>
       ):error?(
@@ -32,7 +32,7 @@ const SearchList = () => {
               <Product product={product} />
             </Col>
           ))}
-        </Row>:<h3>{`No products matching search '${keyword}' found!`}</h3>
+        </Row>:<h3>No products matching search '{keyword}' found!</h3>
       }
     </div>
   );
