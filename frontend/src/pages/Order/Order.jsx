@@ -29,7 +29,7 @@ const Order = () => {
     useEffect(()=>{
         if (!userInfo) {
             navigate('/login');
-          }
+          };
 
         const addPayPalScript=async ()=>{
             const {data:clientId}=await axios.get('/api/config/paypal');
