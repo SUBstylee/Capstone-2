@@ -1,12 +1,12 @@
 import { useEffect,useState } from "react";
 import axios from "axios";
 import { useNavigate,Link, useParams } from "react-router-dom";
-import {Row,Col,ListGroup,Image,Card} from 'react-bootstrap';
+import {Row,Col,ListGroup,Image,Card,Button} from 'react-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
-import { getOrderDetails,payOrder } from "../../actions/orderActions";
-import { ORDER_PAY_RESET } from "../../constants/orderConstants";
+import { deliverOrder, getOrderDetails,payOrder } from "../../actions/orderActions";
+import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from "../../constants/orderConstants";
 import {PayPalButton} from 'react-paypal-button-v2';
 // will add stripe payments during polish phase
 // import StripeCheckout from 'react-stripe-checkout';
@@ -23,6 +23,8 @@ const Order = () => {
     const {order,loading,error}=orderDetails;
     const orderPay=useSelector(state=>state.orderPay);
     const {loading:loadingPay,success:successPay}=orderPay;
+    const orderDeliver=useSelector(state=>state.orderDeliver);
+    const {loading:loadingDeliver,success:successDeliver}=orderDeliver;
 
     useEffect(()=>{
         if (!userInfo) {
@@ -39,8 +41,9 @@ const Order = () => {
             document.body.appendChild(script);
         };
 
-        if(!order || order._id !== id || successPay) {
+        if(!order || order._id !== id || successPay||successDeliver) {
             dispatch({type:ORDER_PAY_RESET});
+            dispatch({type:ORDER_DELIVER_RESET});
             dispatch(getOrderDetails(id));
         }else if(!order.isPaid){
             if(!window.paypal){
@@ -49,11 +52,15 @@ const Order = () => {
                 setSdkReady(true);
             };
         };
-    },[order,id,dispatch,successPay,navigate,userInfo]);
+    },[order,id,dispatch,successPay,successDeliver,navigate,userInfo]);
 
     const successPaymentHandler=(paymentResult)=>{
         console.log(paymentResult);
         dispatch(payOrder(id,paymentResult));
+    };
+
+    const deliverHandler=()=>{
+        dispatch(deliverOrder(order));
     };
 
     return loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
@@ -77,7 +84,7 @@ const Order = () => {
                                 {order.shippingAddress.postalCode},{' '}
                                 {order.shippingAddress.country}
                             </p>
-                            {order.isShipped? <Message variant='success'>Delivered on: {order.paidAt}</Message>:<Message variant='warning'>Delivery pending</Message>}
+                            {order.isDelivered? <Message variant='success'>Delivered on: {order.paidAt}</Message>:<Message variant='warning'>Delivery pending</Message>}
                         </ListGroup.Item>
                         <ListGroup.Item>
                             <h2>Payment</h2>
@@ -144,6 +151,12 @@ const Order = () => {
                                 <ListGroup.Item>
                                     {loadingPay&&<Loader/>}
                                     {!sdkReady?<Loader/>:<PayPalButton amount={order.totalPrice.toFixed(2)} onSuccess={successPaymentHandler}/>}
+                                </ListGroup.Item>
+                            )}
+                            {loadingDeliver&&<Loader/>}
+                            {userInfo&&userInfo.isAdmin&&order.isPaid&&!order.isDelivered&&(
+                                <ListGroup.Item>
+                                    <Button type='button' className='btn btn-block' onClick={deliverHandler}>Mark As Delivered</Button>
                                 </ListGroup.Item>
                             )}
                         </ListGroup>
