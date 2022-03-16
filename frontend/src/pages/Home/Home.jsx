@@ -6,17 +6,19 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import { listProducts } from "../../actions/productActions";
 import { useParams } from "react-router-dom";
+import Paginate from "../../components/Paginate/Paginate";
 
 const Home = () => {
   const params=useParams();
   const keyword=params.keyword;
+  const pageNumber=params.pageNumber||1;
   const dispatch=useDispatch();
   const productList=useSelector(state=>state.productList);
-  const {loading,error,products}=productList;
+  const {loading,error,products,page,pages}=productList;
 
   useEffect(() => {
-    dispatch(listProducts(keyword))
-  }, [dispatch,keyword]);
+    dispatch(listProducts(keyword,pageNumber))
+  }, [dispatch,keyword,pageNumber]);
 
   return (
     <div className='Home'>
@@ -34,6 +36,7 @@ const Home = () => {
           ))}
         </Row>:<h3>{`No products matching search '${keyword}' found!`}</h3>
       }
+      <Paginate pages={pages} page={page} keyword={keyword?keyword:''} isAdmin={false}/>
     </div>
   );
 };

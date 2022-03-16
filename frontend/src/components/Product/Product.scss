@@ -3,5 +3,22 @@
     width: 100%;
     height: 20vw;
     object-fit: cover;
-}
-} 
+  };
+
+
+  @media (max-width: 991px) {
+    .cardImg {
+      height: 30vw;
+    };
+  };
+  @media (max-width: 767px) {
+    .cardImg {
+      height: 40vw;
+    };
+  };
+  @media (max-width: 575px) {
+    .cardImg {
+      height: 70vw;
+    };
+  };
+};
