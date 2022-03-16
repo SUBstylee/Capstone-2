@@ -7,7 +7,7 @@ import Loader from '../../components/Loader/Loader';
 import { listProducts } from "../../actions/productActions";
 import { useParams } from "react-router-dom";
 
-const Home = () => {
+const SearchList = () => {
   const params=useParams();
   const keyword=params.keyword;
   const dispatch=useDispatch();
@@ -19,8 +19,8 @@ const Home = () => {
   }, [dispatch,keyword]);
 
   return (
-    <div className='Home'>
-      <h1>Latest Products</h1>
+    <div className='SearchList'>
+      <h1>Search Results</h1>
       {loading?(
         <Loader/>
       ):error?(
@@ -38,4 +38,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default SearchList;
