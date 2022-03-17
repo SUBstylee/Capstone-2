@@ -17,12 +17,16 @@ const SearchList = () => {
   const {loading,error,products,pages,page}=productList;
 
   useEffect(() => {
-    dispatch(listProducts(keyword,pageNumber))
+    if(keyword==='__All__'){
+      dispatch(listProducts('a'||'e'||'i'||'o'||'u',pageNumber));
+    }else{
+      dispatch(listProducts(keyword,pageNumber));
+    };
   }, [dispatch,keyword,pageNumber]);
 
   return (
     <div className='SearchList'>
-      <h1>Search Results for '{keyword}':</h1>
+      <h1>{keyword.replace(/[^a-z0-9]/gi,'')}</h1>
       {loading?(
         <Loader/>
       ):error?(

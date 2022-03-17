@@ -86,32 +86,32 @@ const Header = () => {
       </Navbar>
       <Navbar className="Header-cats" bg='white'>
             <Nav className='mx-auto'>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__Hats__'>
                 <Nav.Link>
                   <i className='fa-solid fa-hat-cowboy'></i> Hats
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__Shoes__'>
                 <Nav.Link>
                   <i className='fa-solid fa-shoe-prints'></i> Shoes
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__Jackets__'>
                 <Nav.Link>
                   <i className='fa-solid fa-shirt'></i> Jackets
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__Women__'>
                 <Nav.Link>
                   <i className='fa-solid fa-person'></i> Women
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__Men__'>
                 <Nav.Link>
                 <i className='fa-solid fa-person-dress'></i> Men
                 </Nav.Link>
               </LinkContainer>
-              <LinkContainer to='/cart'>
+              <LinkContainer to='/search/__All__'>
                 <Nav.Link>
                   <i className='fa-solid fa-list-ul'></i> All
                 </Nav.Link>
