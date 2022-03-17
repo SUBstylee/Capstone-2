@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { listProductDetails,createProductReview } from "../../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../../constants/productConstants";
+import CustomTextArea from "../../components/CustomTextArea/CustomTextArea";
 
 const ProductDetails = () => {
   const [qty,setQty]=useState(1);
@@ -164,10 +165,14 @@ const ProductDetails = () => {
                       <option value='5'>5 - Great</option>
                     </Form.Control>
                   </Form.Group>
-                  <Form.Group controlId="comment">
-                    <Form.Label>Comment</Form.Label>
-                    <Form.Control as='textarea' rows='3' value={comment} onChange={(e)=>setComment(e.target.value)}></Form.Control>
-                  </Form.Group>
+                  <CustomTextArea
+                    id='comment' 
+                    name='comment' 
+                    labelText='Comment'  
+                    required 
+                    value={comment} 
+                    onChange={(e)=>setComment(e.target.value)}
+                  />
                   <Button type='submit' variant='primary'>Submit</Button>
                 </Form>
               ):(<Message>You must <Link to='/login'>sign in</Link> to leave a review.</Message>)}

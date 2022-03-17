@@ -1,0 +1,45 @@
+.CustomTextArea{
+    position: relative;
+    margin: 20px 0 40px;
+    width: 300px;
+    textarea{
+        background-color: #fff !important;
+        border: none;
+        border-bottom: 2px #919191 solid;
+        border-top: 2px #919191 solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 20px;
+    };
+
+    textarea:focus, textarea:valid{
+        outline: 0;
+        border-bottom-color: rgb(28, 28, 165);
+        border-top-color: rgb(28, 28, 165);
+    };
+
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover, 
+    textarea:-webkit-autofill:focus, 
+    textarea:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+
+    label{
+        position: absolute;
+        top:5px;
+        left: 0;
+    }
+    label span{
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);
+    }
+    textarea:focus + label span,
+    textarea:valid + label span{
+        color: rgb(28, 28, 165);
+        transform: translateY(-35px);
+    }
+};

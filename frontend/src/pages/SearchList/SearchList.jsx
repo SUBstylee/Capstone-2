@@ -5,10 +5,11 @@ import Product from "../../components/Product/Product";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import { listProducts } from "../../actions/productActions";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Paginate from "../../components/Paginate/Paginate";
 
 const SearchList = () => {
+  const navigate=useNavigate();
   const params=useParams();
   const keyword=params.keyword;
   const pageNumber=params.pageNumber||1;
@@ -27,6 +28,12 @@ const SearchList = () => {
   return (
     <div className='SearchList'>
       <h1>{keyword.replace(/[^a-z0-9]/gi,'')}</h1>
+      <button
+        className='btn btn-light'
+        onClick={() => (navigate(-1) ? navigate(-1) : navigate("/"))}
+      >
+        Go Back
+      </button>
       {loading?(
         <Loader/>
       ):error?(
