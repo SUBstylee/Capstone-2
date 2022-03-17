@@ -36,7 +36,7 @@ const SearchList = () => {
           ))}
         </Row>:<h3>No products matching search '{keyword}' found!</h3>
       }
-      <Paginate pages={pages} page={page} keyword={keyword?keyword:''}/>
+      <Paginate pages={pages} page={page} keyword={keyword?keyword:''} isAdmin={false}/>
     </div>
   );
 };
