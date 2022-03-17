@@ -166,7 +166,7 @@ const ProductDetails = () => {
                   </Form.Group>
                   <Form.Group controlId="comment">
                     <Form.Label>Comment</Form.Label>
-                    <Form.Control as='textarea' row='3' value={comment} onChange={(e)=>setComment(e.target.value)}></Form.Control>
+                    <Form.Control as='textarea' rows='3' value={comment} onChange={(e)=>setComment(e.target.value)}></Form.Control>
                   </Form.Group>
                   <Button type='submit' variant='primary'>Submit</Button>
                 </Form>
