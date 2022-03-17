@@ -18,6 +18,7 @@ import UserEdit from "./pages/UserEdit/UserEdit";
 import ProductList from "./pages/ProductList/ProductList";
 import ProductEdit from "./pages/ProductEdit/ProductEdit";
 import OrderList from "./pages/OrderList/OrderList";
+import SearchList from "./pages/SearchList/SearchList";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/search/:keyword" element={<SearchList />} />
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

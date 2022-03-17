@@ -4,6 +4,7 @@ import { useDispatch,useSelector } from "react-redux";
 
 import brandLogo from "../../assets/images/logos/TAA-header-color-transparent.png";
 import { logout } from "../../actions/userActions";
+import Search from "../Search/Search";
 
 const Header = () => {
   const userLogin=useSelector(state=>state.userLogin);
@@ -70,6 +71,7 @@ const Header = () => {
                   </LinkContainer>
                 </NavDropdown>
               )}
+              <Search/>
             </Nav>
           </Navbar.Collapse>
         </Container>
