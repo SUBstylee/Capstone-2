@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className='Home'>
       <h1>Welcome to Totally Awesome Apparel!</h1>
-      <Toast top={`50px`} right={`25px`} time={15000} messageTitle={'Not a real store!'} messageText={'This site was build using the MERN stack. Payments are in test mode, so you will not be charged. There are no real products here.'}/>
+      <Toast top={`50px`} right={`25px`} time={15000} messageTitle={'Not a real store!'} messageText={'This site was built using the MERN stack. Payments are in test mode, so you will not be charged. There are no real products here.'}/>
       {loading?
       (<Loader/>):error?
       (<Message variant='danger'>{error}</Message>):(
