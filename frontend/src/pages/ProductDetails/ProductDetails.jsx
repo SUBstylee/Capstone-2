@@ -55,7 +55,6 @@ const ProductDetails = () => {
 
   return (
     <div className='ProductDetails'>
-      <MetaWrapper title={`TAA-${product.name}`}/>
       <button
         className='btn btn-light'
         onClick={() => (navigate(-1) ? navigate(-1) : navigate("/"))}
@@ -68,6 +67,7 @@ const ProductDetails = () => {
         <Message variant='danger'>{error}</Message>
       ):(
         <>
+        <MetaWrapper title={`TAA-${product.name}`}/>
         <Row>
         <Col md={6}>
           <Image src={product.image} alt={product.name} fluid />

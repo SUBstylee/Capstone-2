@@ -43,7 +43,6 @@ const Register = () => {
 
   return (
     <div className="Login">
-        <MetaWrapper title='TAA-Register'/>
         <Row>
             <Col lg={6}>
         <FormContainer>
@@ -51,6 +50,7 @@ const Register = () => {
             {message&&<Message variant='danger'>{message}</Message>}
             {error&&<Message variant='danger'>{error}</Message>}
             {loading&&<Loader/>}
+            <MetaWrapper title='TAA-Register'/>
             <Form onSubmit={submitHandler}>   
                 <CustomInput 
                     id='name' 

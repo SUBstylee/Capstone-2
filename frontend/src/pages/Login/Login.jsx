@@ -34,11 +34,11 @@ const Login = () => {
 
   return (
     <div className="Login">
-        <MetaWrapper title='TAA-Login'/>
         <FormContainer>
             <h1>Sign In</h1>
             {error&&<Message variant='danger'>{error}</Message>}
             {loading&&<Loader/>}
+            <MetaWrapper title='TAA-Login'/>
             <Form onSubmit={submitHandler}>
                 <CustomInput id='email' type='email' autoComplete='current-email' name='email' labelText='Email Address' required={true} value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 <CustomInput id='password' type='password' autoComplete='current-password' name='password' labelText='Password' required={true} value={password} onChange={(e)=>setPassword(e.target.value)}/>

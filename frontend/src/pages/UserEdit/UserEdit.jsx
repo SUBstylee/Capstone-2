@@ -51,13 +51,14 @@ const UserEdit = () => {
 
   return (
     <div className="UserEdit">
-        <MetaWrapper title={`TAA-Edit ${name}`}/>
         <Link to='/admin/userlist' className="btn btn-light my-3">Go Back</Link>
         <FormContainer>
             <h1>Edit User</h1>
             {loadingUpdate&&<Loader/>}
             {errorUpdate&&<Message variant='danger'>{errorUpdate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title={`TAA-Edit ${name}`}/>
                 <Form onSubmit={submitHandler}>
                 <Form.Group controlId='name'>
                     <Form.Label>Name</Form.Label>    
@@ -74,6 +75,7 @@ const UserEdit = () => {
                     Update
                 </Button>    
             </Form>
+            </>
             )}
         </FormContainer>
     </div>

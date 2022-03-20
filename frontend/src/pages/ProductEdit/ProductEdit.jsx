@@ -94,13 +94,14 @@ const ProductEdit = () => {
 
   return (
     <div className="ProductEdit">
-        <MetaWrapper title={`TAA-Edit ${product.name}`}/>
         <Link to='/admin/productlist' className="btn btn-light my-3">Go Back</Link>
         <FormContainer>
             <h1>Edit Product</h1>
             {loadingUpdate&&<Loader/>}
             {errorUpdate&&<Message variant='danger'>{errorUpdate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title={`TAA-Edit ${product.name}`}/>
                 <Form onSubmit={submitHandler}>
                 <Form.Group controlId='name'>
                     <Form.Label>Name</Form.Label>    
@@ -143,6 +144,7 @@ const ProductEdit = () => {
                     Update
                 </Button>    
             </Form>
+            </>
             )}
         </FormContainer>
     </div>

@@ -28,7 +28,6 @@ const SearchList = () => {
 
   return (
     <div className='SearchList'>
-      <MetaWrapper title={`TAA-${keyword.replace(/[^a-z0-9]/gi,'')}`}/>
       <h1>{keyword.replace(/[^a-z0-9]/gi,'')}</h1>
       <button
         className='btn btn-light'
@@ -42,12 +41,17 @@ const SearchList = () => {
         <Message variant='danger'>{error}</Message>
       ):products.length>0?
         <Row>
+          <MetaWrapper title={`TAA-${keyword.replace(/[^a-z0-9]/gi,'')}`}/>
           {products.map((product) => (
             <Col className="mb-3" xs={12} sm={6} md={4} lg={3} key={product._id}>
               <Product product={product} />
             </Col>
           ))}
-        </Row>:<h3>No products matching search '{keyword}' found!</h3>
+        </Row>:
+        <>
+        <MetaWrapper title={`TAA-Not Found`}/>
+        <h3>No products matching search '{keyword}' found!</h3>
+        </>
       }
       <Paginate pages={pages} page={page} keyword={keyword?keyword:''} isAdmin={false}/>
     </div>

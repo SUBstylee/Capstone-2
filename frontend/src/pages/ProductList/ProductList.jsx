@@ -49,7 +49,6 @@ const ProductList = () => {
 
     return (
         <div className="TAA-Product List">
-            <MetaWrapper title='TAA-Home'/>
             <h1>Products</h1>
             <Button className="my-3" onClick={createProductHandler}><i className="fa-solid fa-circle-plus"></i> Create Product</Button>
             {loadingDelete&&<Loader/>}
@@ -58,6 +57,7 @@ const ProductList = () => {
             {errorCreate&&<Message variant='danger'>{errorCreate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
                 <>
+                <MetaWrapper title='TAA-Home'/>
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>
                     <thead>
                         <tr>

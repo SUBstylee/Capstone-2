@@ -56,8 +56,8 @@ const Profile = () => {
 
   return (
     <div className="Profile">
-        <MetaWrapper title='TAA-Profile'/>
         {loading&&<Loader/>}
+        <MetaWrapper title='TAA-Profile'/>
         <Row>
             <Col lg={4}>
                 <h2>User Profile</h2>

@@ -26,9 +26,10 @@ const OrderList = () => {
 
     return (
         <div className="UserList">
-            <MetaWrapper title='TAA-Order List'/>
             <h1>Orders</h1>
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title='TAA-Order List'/>
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>
                     <thead>
                         <tr>
@@ -57,6 +58,7 @@ const OrderList = () => {
                         ))}
                     </tbody>
                 </Table>
+                </>
             )}
         </div>
     );

@@ -35,9 +35,10 @@ const UserList = () => {
 
     return (
         <div className="UserList">
-            <MetaWrapper title='TAA-User List'/>
             <h1>Users</h1>
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title='TAA-User List'/>
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>
                     <thead>
                         <tr>
@@ -63,6 +64,7 @@ const UserList = () => {
                         ))}
                     </tbody>
                 </Table>
+                </>
             )}
         </div>
     );

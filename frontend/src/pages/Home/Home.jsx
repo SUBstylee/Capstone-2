@@ -11,12 +11,12 @@ const Home = () => {
 
   return (
     <div className='Home'>
-      <MetaWrapper title='TAA-Home'/>
       <h1>Welcome to Totally Awesome Apparel!</h1>
       {loading?
       (<Loader/>):error?
       (<Message variant='danger'>{error}</Message>):(
         <>
+        <MetaWrapper title='TAA-Home'/>
         <Directory/>
         <TopProducts/>
         </>
