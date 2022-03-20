@@ -6,6 +6,7 @@ import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {listOrders} from '../../actions/orderActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const OrderList = () => {
     const dispatch=useDispatch();
@@ -25,6 +26,7 @@ const OrderList = () => {
 
     return (
         <div className="UserList">
+            <MetaWrapper title='TAA-Order List'/>
             <h1>Orders</h1>
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>

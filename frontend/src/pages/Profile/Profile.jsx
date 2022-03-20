@@ -9,6 +9,7 @@ import CustomInput from "../../components/CustomInput/CustomInput";
 import {getUserDetails,updateUserProfile} from '../../actions/userActions';
 import {listMyOrders} from '../../actions/orderActions';
 import { USER_UPDATE_PROFILE_RESET } from "../../constants/userConstants";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const Profile = () => {
     const [name,setName]=useState('')
@@ -55,6 +56,7 @@ const Profile = () => {
 
   return (
     <div className="Profile">
+        <MetaWrapper title='TAA-Profile'/>
         {loading&&<Loader/>}
         <Row>
             <Col lg={4}>

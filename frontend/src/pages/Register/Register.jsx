@@ -6,6 +6,7 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import CustomInput from "../../components/CustomInput/CustomInput";
 import {register} from '../../actions/userActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
 import PasswordGenerator from "../../components/PasswordGenerator/PasswordGenerator";
@@ -42,6 +43,7 @@ const Register = () => {
 
   return (
     <div className="Login">
+        <MetaWrapper title='TAA-Register'/>
         <Row>
             <Col lg={6}>
         <FormContainer>

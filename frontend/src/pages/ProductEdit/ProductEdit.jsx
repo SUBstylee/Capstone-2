@@ -6,6 +6,7 @@ import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {listProductDetails,updateProduct} from '../../actions/productActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 
 import FormContainer from "../../components/FormContainer/FormContainer";
@@ -93,6 +94,7 @@ const ProductEdit = () => {
 
   return (
     <div className="ProductEdit">
+        <MetaWrapper title={`TAA-Edit ${product.name}`}/>
         <Link to='/admin/productlist' className="btn btn-light my-3">Go Back</Link>
         <FormContainer>
             <h1>Edit Product</h1>

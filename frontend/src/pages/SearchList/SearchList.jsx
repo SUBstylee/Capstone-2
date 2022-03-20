@@ -7,6 +7,7 @@ import Loader from '../../components/Loader/Loader';
 import { listProducts } from "../../actions/productActions";
 import { useNavigate, useParams } from "react-router-dom";
 import Paginate from "../../components/Paginate/Paginate";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const SearchList = () => {
   const navigate=useNavigate();
@@ -27,6 +28,7 @@ const SearchList = () => {
 
   return (
     <div className='SearchList'>
+      <MetaWrapper title={`TAA-${keyword.replace(/[^a-z0-9]/gi,'')}`}/>
       <h1>{keyword.replace(/[^a-z0-9]/gi,'')}</h1>
       <button
         className='btn btn-light'

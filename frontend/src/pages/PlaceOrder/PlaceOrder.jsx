@@ -5,6 +5,7 @@ import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
 import { createOrder } from "../../actions/orderActions";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const PlaceOrder = () => {
     const dispatch=useDispatch();
@@ -40,6 +41,7 @@ const PlaceOrder = () => {
 
     return (
         <div className="PlaceOrder">
+            <MetaWrapper title='TAA-Place Order'/>
             <CheckoutSteps step1 step2 step3 step4 />
             <Row>
                 <Col md={8}>

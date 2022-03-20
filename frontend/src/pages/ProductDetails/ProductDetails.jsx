@@ -8,6 +8,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { listProductDetails,createProductReview } from "../../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../../constants/productConstants";
 import CustomTextArea from "../../components/CustomTextArea/CustomTextArea";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const ProductDetails = () => {
   const [qty,setQty]=useState(1);
@@ -54,6 +55,7 @@ const ProductDetails = () => {
 
   return (
     <div className='ProductDetails'>
+      <MetaWrapper title={`TAA-${product.name}`}/>
       <button
         className='btn btn-light'
         onClick={() => (navigate(-1) ? navigate(-1) : navigate("/"))}

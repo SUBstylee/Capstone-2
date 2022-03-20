@@ -8,6 +8,7 @@ import Loader from '../../components/Loader/Loader';
 import {listProducts,deleteProduct,createProduct} from '../../actions/productActions';
 import { PRODUCT_CREATE_RESET } from "../../constants/productConstants";
 import Paginate from "../../components/Paginate/Paginate";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const ProductList = () => {
     const dispatch=useDispatch();
@@ -47,7 +48,8 @@ const ProductList = () => {
     };
 
     return (
-        <div className="ProductList">
+        <div className="TAA-Product List">
+            <MetaWrapper title='TAA-Home'/>
             <h1>Products</h1>
             <Button className="my-3" onClick={createProductHandler}><i className="fa-solid fa-circle-plus"></i> Create Product</Button>
             {loadingDelete&&<Loader/>}

@@ -6,6 +6,7 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {getUserDetails,updateUser} from '../../actions/userActions';
 import { USER_UPDATE_RESET } from "../../constants/userConstants";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
 
@@ -50,6 +51,7 @@ const UserEdit = () => {
 
   return (
     <div className="UserEdit">
+        <MetaWrapper title={`TAA-Edit ${name}`}/>
         <Link to='/admin/userlist' className="btn btn-light my-3">Go Back</Link>
         <FormContainer>
             <h1>Edit User</h1>

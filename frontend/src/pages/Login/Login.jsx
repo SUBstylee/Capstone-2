@@ -6,6 +6,7 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import CustomInput from "../../components/CustomInput/CustomInput";
 import {login} from '../../actions/userActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
 
@@ -33,6 +34,7 @@ const Login = () => {
 
   return (
     <div className="Login">
+        <MetaWrapper title='TAA-Login'/>
         <FormContainer>
             <h1>Sign In</h1>
             {error&&<Message variant='danger'>{error}</Message>}
