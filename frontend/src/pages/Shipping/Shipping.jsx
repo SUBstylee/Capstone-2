@@ -6,6 +6,7 @@ import { saveShippingAddress } from "../../actions/cartActions";
 import FormContainer from "../../components/FormContainer/FormContainer";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
 import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
+import CustomInput from "../../components/CustomInput/CustomInput";
 
 const Shipping = () => {
     const cart=useSelector(state=>state.cart);
@@ -31,22 +32,42 @@ const Shipping = () => {
                 <CheckoutSteps step1 step2/>
                 <h1>Shipping</h1>
                 <Form onSubmit={submitHandler}>
-                    <Form.Group controlId='address'>
-                        <Form.Label>Address</Form.Label>    
-                        <Form.Control type='address' autoComplete="address" placeholder="Enter address" value={address} required onChange={(e)=>setAddress(e.target.value)}></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId='city'>
-                        <Form.Label>City</Form.Label>    
-                        <Form.Control type='city' autoComplete="home city" placeholder="Enter city" value={city} required onChange={(e)=>setCity(e.target.value)}></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId='postalCode'>
-                        <Form.Label>Postal code</Form.Label>    
-                        <Form.Control type='postalCode' autoComplete="postal-code" placeholder="Enter postal code" value={postalCode} required onChange={(e)=>setPostalCode(e.target.value)}></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId='country'>
-                        <Form.Label>Country</Form.Label>    
-                        <Form.Control type='country' autoComplete="country" placeholder="Enter country" value={country} required onChange={(e)=>setCountry(e.target.value)}></Form.Control>
-                    </Form.Group>
+                    <CustomInput 
+                        id='address' 
+                        type='text' 
+                        autoComplete="address" 
+                        name='address' 
+                        labelText='Address' 
+                        value={address} 
+                        required 
+                        onChange={(e)=>setAddress(e.target.value)}/>
+                    <CustomInput 
+                        id='city' 
+                        type='text' 
+                        autoComplete="home city" 
+                        name='city' 
+                        labelText='City' 
+                        value={city} 
+                        required 
+                        onChange={(e)=>setCity(e.target.value)}/>
+                    <CustomInput 
+                        id='postalCode' 
+                        type='number' 
+                        autoComplete="postal-code" 
+                        name='postalCode' 
+                        labelText='Postal Code' 
+                        value={postalCode} 
+                        required 
+                        onChange={(e)=>setPostalCode(e.target.value)}/>
+                    <CustomInput 
+                        id='country' 
+                        type='text' 
+                        autoComplete="country" 
+                        name='country' 
+                        labelText='Country' 
+                        value={country} 
+                        required 
+                        onChange={(e)=>setCountry(e.target.value)}/>
                     <Button className='mt-2' type='submit' variant="primary">Continue</Button>
                 </Form>
             </FormContainer>   
