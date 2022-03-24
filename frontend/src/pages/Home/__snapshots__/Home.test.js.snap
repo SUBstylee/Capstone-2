@@ -6,16 +6,175 @@ exports[`matches snapshot 1`] = `
     class="Home"
   >
     <h1>
-      Latest Products
+      Welcome to Totally Awesome Apparel!
     </h1>
     <div
-      class="Loader"
+      class="Toast "
+      style="top: 50px; right: 25px;"
     >
-      <span
-        class="sr-only"
+      <button
+        class="btn-sm btn btn-danger"
+        type="button"
       >
-        Loading...
-      </span>
+        <i
+          class="fa-solid fa-x"
+        />
+      </button>
+      <h4>
+        Not a real store!
+      </h4>
+      <p>
+        This site was built using the MERN stack. Payments are in test mode, so you will not be charged. There are no real products here.
+      </p>
+    </div>
+    <div
+      class="Directory"
+    >
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/hats.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            HATS
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/jackets.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            JACKETS
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/sneakers.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            SHOES
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/womens.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            WOMEN
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/men.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            MEN
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+      <div
+        class="MenuItem"
+      >
+        <div
+          class="background-image"
+          style="background-image: url(/assets/images/shop-img/sample.png);"
+        />
+        <div
+          class="content"
+        >
+          <h1
+            class="title"
+          >
+            ALL
+          </h1>
+          <span
+            class="subtitle"
+          >
+            SHOP NOW
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="TopProducts"
+    >
+      <div
+        class="Loader"
+      >
+        <span
+          class="sr-only"
+        >
+          Loading...
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>

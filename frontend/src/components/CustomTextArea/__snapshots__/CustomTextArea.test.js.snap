@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="CustomTextArea"
+  >
+    <textarea
+      id="comment"
+      name="comment"
+      required=""
+    />
+    <label
+      for="comment"
+    >
+      <span
+        style="transition-delay: 0ms;"
+      >
+        C
+      </span>
+      <span
+        style="transition-delay: 50ms;"
+      >
+        o
+      </span>
+      <span
+        style="transition-delay: 100ms;"
+      >
+        m
+      </span>
+      <span
+        style="transition-delay: 150ms;"
+      >
+        m
+      </span>
+      <span
+        style="transition-delay: 200ms;"
+      >
+        e
+      </span>
+      <span
+        style="transition-delay: 250ms;"
+      >
+        n
+      </span>
+      <span
+        style="transition-delay: 300ms;"
+      >
+        t
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;

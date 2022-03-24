@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="UserEdit"
+  >
+    <a
+      class="btn btn-light my-3"
+      href="/admin/userlist"
+    >
+      Go Back
+    </a>
+    <div
+      class="FormContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-md-center row"
+        >
+          <div
+            class="col-md-6 col-12"
+          >
+            <h1>
+              Edit User
+            </h1>
+            <form
+              class=""
+            >
+              <div>
+                <label
+                  class="form-label"
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  autocomplete="current-name"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter name"
+                  type="name"
+                  value=""
+                />
+              </div>
+              <div>
+                <label
+                  class="form-label"
+                  for="email"
+                >
+                  Email Address
+                </label>
+                <input
+                  autocomplete="current-email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter email"
+                  type="email"
+                  value=""
+                />
+              </div>
+              <div>
+                <div
+                  class="form-check"
+                >
+                  <input
+                    class="form-check-input"
+                    id="isAdmin"
+                    type="checkbox"
+                  />
+                  <label
+                    class="form-check-label"
+                    for="isAdmin"
+                    title=""
+                  >
+                    Is Admin
+                  </label>
+                </div>
+              </div>
+              <button
+                class="my-2 btn btn-primary"
+                type="submit"
+              >
+                Update
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

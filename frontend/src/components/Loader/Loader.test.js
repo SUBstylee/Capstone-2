@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import Loader from './Loader.jsx';
 
-test("renders Footer component without crashing", () => {
+test("renders Loader component without crashing", () => {
     const { getByText } = render(
         <Loader />
     );

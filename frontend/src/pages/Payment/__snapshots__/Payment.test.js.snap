@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Payment"
+  >
+    <div
+      class="FormContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-md-center row"
+        >
+          <div
+            class="col-md-6 col-12"
+          >
+            <div
+              class="CheckoutSteps"
+            >
+              <div
+                class="justify-content-center mb-4 nav"
+              >
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    data-rr-ui-event-key="/login"
+                    href="/login"
+                  >
+                    Sign In
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    data-rr-ui-event-key="/shipping"
+                    href="/shipping"
+                  >
+                    Shipping
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    data-rr-ui-event-key="/payment"
+                    href="/payment"
+                  >
+                    Payment
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    aria-disabled="true"
+                    class="nav-link disabled"
+                    role="button"
+                  >
+                    Place Order
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              Payment Method
+            </h1>
+            <form
+              class=""
+            >
+              <div>
+                <legend
+                  class="form-label"
+                >
+                  Select Method
+                </legend>
+                <div
+                  class="row"
+                >
+                  <div
+                    class="payment-icons col-1"
+                  >
+                    <label
+                      for="PayPal"
+                    >
+                      <i
+                        class="fa-brands fa-paypal"
+                      />
+                    </label>
+                    <br />
+                    <label
+                      for="Stripe"
+                    >
+                      <i
+                        class="fa-brands fa-stripe-s"
+                      />
+                    </label>
+                  </div>
+                  <div
+                    class="col-2"
+                  >
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        checked=""
+                        class="form-check-input"
+                        id="PayPal"
+                        name="paymentMethod"
+                        type="radio"
+                        value="PayPal"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="PayPal"
+                        title=""
+                      >
+                        PayPal
+                      </label>
+                    </div>
+                    <div
+                      class="form-check"
+                    >
+                      <input
+                        class="form-check-input"
+                        disabled=""
+                        id="Stripe"
+                        name="paymentMethod"
+                        type="radio"
+                        value="Stripe"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="Stripe"
+                        title=""
+                      >
+                        Stripe
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="mt-2 btn btn-primary"
+                type="submit"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

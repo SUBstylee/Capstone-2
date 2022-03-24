@@ -34,8 +34,8 @@ const PlaceOrder = () => {
             paymentMethod: cart.paymentMethod,
             itemsPrice: cart.itemsPrice,
             shippingPrice: cart.shippingPrice,
-            taxPrice: cart.taxPrice,
-            totalPrice: cart.totalPrice,
+            taxPrice: Number(cart.taxPrice).toFixed(2),
+            totalPrice: Number(cart.totalPrice).toFixed(2),
         }));
     };
 

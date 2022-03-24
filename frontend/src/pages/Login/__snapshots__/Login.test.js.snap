@@ -2,8 +2,189 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    Login
+  <div
+    class="Login"
+  >
+    <div
+      class="FormContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-md-center row"
+        >
+          <div
+            class="col-md-6 col-12"
+          >
+            <h1>
+              Sign In
+            </h1>
+            <form
+              class=""
+            >
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="current-email"
+                  id="email"
+                  name="email"
+                  required=""
+                  type="email"
+                  value=""
+                />
+                <label
+                  for="email"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    E
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    m
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    a
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    i
+                  </span>
+                  <span
+                    style="transition-delay: 200ms;"
+                  >
+                    l
+                  </span>
+                  <span
+                    style="transition-delay: 250ms;"
+                  >
+                     
+                  </span>
+                  <span
+                    style="transition-delay: 300ms;"
+                  >
+                    A
+                  </span>
+                  <span
+                    style="transition-delay: 350ms;"
+                  >
+                    d
+                  </span>
+                  <span
+                    style="transition-delay: 400ms;"
+                  >
+                    d
+                  </span>
+                  <span
+                    style="transition-delay: 450ms;"
+                  >
+                    r
+                  </span>
+                  <span
+                    style="transition-delay: 500ms;"
+                  >
+                    e
+                  </span>
+                  <span
+                    style="transition-delay: 550ms;"
+                  >
+                    s
+                  </span>
+                  <span
+                    style="transition-delay: 600ms;"
+                  >
+                    s
+                  </span>
+                </label>
+              </div>
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="current-password"
+                  id="password"
+                  name="password"
+                  required=""
+                  type="password"
+                  value=""
+                />
+                <label
+                  for="password"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    P
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    a
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    s
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    s
+                  </span>
+                  <span
+                    style="transition-delay: 200ms;"
+                  >
+                    w
+                  </span>
+                  <span
+                    style="transition-delay: 250ms;"
+                  >
+                    o
+                  </span>
+                  <span
+                    style="transition-delay: 300ms;"
+                  >
+                    r
+                  </span>
+                  <span
+                    style="transition-delay: 350ms;"
+                  >
+                    d
+                  </span>
+                </label>
+              </div>
+              <button
+                class="my-2 btn btn-primary"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </form>
+            <div
+              class="py-3 row"
+            >
+              <div
+                class="col"
+              >
+                New Customer? 
+                <a
+                  href="/register?redirect=/"
+                >
+                  Register
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </DocumentFragment>
 `;

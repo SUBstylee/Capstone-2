@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Shipping"
+  >
+    <div
+      class="FormContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-md-center row"
+        >
+          <div
+            class="col-md-6 col-12"
+          >
+            <div
+              class="CheckoutSteps"
+            >
+              <div
+                class="justify-content-center mb-4 nav"
+              >
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    data-rr-ui-event-key="/login"
+                    href="/login"
+                  >
+                    Sign In
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    data-rr-ui-event-key="/shipping"
+                    href="/shipping"
+                  >
+                    Shipping
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    aria-disabled="true"
+                    class="nav-link disabled"
+                    role="button"
+                  >
+                    Payment
+                  </a>
+                </div>
+                <div
+                  class="nav-item"
+                >
+                  <a
+                    aria-disabled="true"
+                    class="nav-link disabled"
+                    role="button"
+                  >
+                    Place Order
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h1>
+              Shipping
+            </h1>
+            <form
+              class=""
+            >
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="address"
+                  id="address"
+                  name="address"
+                  required=""
+                  type="text"
+                  value=""
+                />
+                <label
+                  for="address"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    A
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    d
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    d
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    r
+                  </span>
+                  <span
+                    style="transition-delay: 200ms;"
+                  >
+                    e
+                  </span>
+                  <span
+                    style="transition-delay: 250ms;"
+                  >
+                    s
+                  </span>
+                  <span
+                    style="transition-delay: 300ms;"
+                  >
+                    s
+                  </span>
+                </label>
+              </div>
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="home city"
+                  id="city"
+                  name="city"
+                  required=""
+                  type="text"
+                  value=""
+                />
+                <label
+                  for="city"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    C
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    i
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    t
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    y
+                  </span>
+                </label>
+              </div>
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="postal-code"
+                  id="postalCode"
+                  name="postalCode"
+                  required=""
+                  type="number"
+                  value=""
+                />
+                <label
+                  for="postalCode"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    P
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    o
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    s
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    t
+                  </span>
+                  <span
+                    style="transition-delay: 200ms;"
+                  >
+                    a
+                  </span>
+                  <span
+                    style="transition-delay: 250ms;"
+                  >
+                    l
+                  </span>
+                  <span
+                    style="transition-delay: 300ms;"
+                  >
+                     
+                  </span>
+                  <span
+                    style="transition-delay: 350ms;"
+                  >
+                    C
+                  </span>
+                  <span
+                    style="transition-delay: 400ms;"
+                  >
+                    o
+                  </span>
+                  <span
+                    style="transition-delay: 450ms;"
+                  >
+                    d
+                  </span>
+                  <span
+                    style="transition-delay: 500ms;"
+                  >
+                    e
+                  </span>
+                </label>
+              </div>
+              <div
+                class="CustomInput"
+              >
+                <input
+                  autocomplete="country"
+                  id="country"
+                  name="country"
+                  required=""
+                  type="text"
+                  value=""
+                />
+                <label
+                  for="country"
+                >
+                  <span
+                    style="transition-delay: 0ms;"
+                  >
+                    C
+                  </span>
+                  <span
+                    style="transition-delay: 50ms;"
+                  >
+                    o
+                  </span>
+                  <span
+                    style="transition-delay: 100ms;"
+                  >
+                    u
+                  </span>
+                  <span
+                    style="transition-delay: 150ms;"
+                  >
+                    n
+                  </span>
+                  <span
+                    style="transition-delay: 200ms;"
+                  >
+                    t
+                  </span>
+                  <span
+                    style="transition-delay: 250ms;"
+                  >
+                    r
+                  </span>
+                  <span
+                    style="transition-delay: 300ms;"
+                  >
+                    y
+                  </span>
+                </label>
+              </div>
+              <button
+                class="mt-2 btn btn-primary"
+                type="submit"
+              >
+                Continue
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

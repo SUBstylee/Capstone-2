@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ProductEdit"
+  >
+    <a
+      class="btn btn-light my-3"
+      href="/admin/productlist"
+    >
+      Go Back
+    </a>
+    <div
+      class="FormContainer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="justify-content-md-center row"
+        >
+          <div
+            class="col-md-6 col-12"
+          >
+            <h1>
+              Edit Product
+            </h1>
+            <div
+              class="Loader"
+            >
+              <span
+                class="sr-only"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

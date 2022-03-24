@@ -9,7 +9,7 @@ test("renders Home component without crashing", () => {
         <Provider store={store}><BrowserRouter><Home /></BrowserRouter></Provider>
     );
 
-    expect(getByText("Latest Products")).toBeInTheDocument();
+    expect(getByText("Welcome to Totally Awesome Apparel!")).toBeInTheDocument();
 });
 
 test("matches snapshot", function () {

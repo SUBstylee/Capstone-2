@@ -1,0 +1,479 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Login"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-lg-6"
+      >
+        <div
+          class="FormContainer"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="justify-content-md-center row"
+            >
+              <div
+                class="col-md-6 col-12"
+              >
+                <h1>
+                  Sign Up
+                </h1>
+                <form
+                  class=""
+                >
+                  <div
+                    class="CustomInput"
+                  >
+                    <input
+                      autocomplete="current-name"
+                      id="name"
+                      name="name"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                    <label
+                      for="name"
+                    >
+                      <span
+                        style="transition-delay: 0ms;"
+                      >
+                        F
+                      </span>
+                      <span
+                        style="transition-delay: 50ms;"
+                      >
+                        u
+                      </span>
+                      <span
+                        style="transition-delay: 100ms;"
+                      >
+                        l
+                      </span>
+                      <span
+                        style="transition-delay: 150ms;"
+                      >
+                        l
+                      </span>
+                      <span
+                        style="transition-delay: 200ms;"
+                      >
+                         
+                      </span>
+                      <span
+                        style="transition-delay: 250ms;"
+                      >
+                        N
+                      </span>
+                      <span
+                        style="transition-delay: 300ms;"
+                      >
+                        a
+                      </span>
+                      <span
+                        style="transition-delay: 350ms;"
+                      >
+                        m
+                      </span>
+                      <span
+                        style="transition-delay: 400ms;"
+                      >
+                        e
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="CustomInput"
+                  >
+                    <input
+                      autocomplete="current-email"
+                      id="email"
+                      name="email"
+                      required=""
+                      type="email"
+                      value=""
+                    />
+                    <label
+                      for="email"
+                    >
+                      <span
+                        style="transition-delay: 0ms;"
+                      >
+                        E
+                      </span>
+                      <span
+                        style="transition-delay: 50ms;"
+                      >
+                        m
+                      </span>
+                      <span
+                        style="transition-delay: 100ms;"
+                      >
+                        a
+                      </span>
+                      <span
+                        style="transition-delay: 150ms;"
+                      >
+                        i
+                      </span>
+                      <span
+                        style="transition-delay: 200ms;"
+                      >
+                        l
+                      </span>
+                      <span
+                        style="transition-delay: 250ms;"
+                      >
+                         
+                      </span>
+                      <span
+                        style="transition-delay: 300ms;"
+                      >
+                        A
+                      </span>
+                      <span
+                        style="transition-delay: 350ms;"
+                      >
+                        d
+                      </span>
+                      <span
+                        style="transition-delay: 400ms;"
+                      >
+                        d
+                      </span>
+                      <span
+                        style="transition-delay: 450ms;"
+                      >
+                        r
+                      </span>
+                      <span
+                        style="transition-delay: 500ms;"
+                      >
+                        e
+                      </span>
+                      <span
+                        style="transition-delay: 550ms;"
+                      >
+                        s
+                      </span>
+                      <span
+                        style="transition-delay: 600ms;"
+                      >
+                        s
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="CustomInput"
+                  >
+                    <input
+                      autocomplete="new-password"
+                      id="password"
+                      name="password"
+                      required=""
+                      type="password"
+                      value=""
+                    />
+                    <label
+                      for="password"
+                    >
+                      <span
+                        style="transition-delay: 0ms;"
+                      >
+                        P
+                      </span>
+                      <span
+                        style="transition-delay: 50ms;"
+                      >
+                        a
+                      </span>
+                      <span
+                        style="transition-delay: 100ms;"
+                      >
+                        s
+                      </span>
+                      <span
+                        style="transition-delay: 150ms;"
+                      >
+                        s
+                      </span>
+                      <span
+                        style="transition-delay: 200ms;"
+                      >
+                        w
+                      </span>
+                      <span
+                        style="transition-delay: 250ms;"
+                      >
+                        o
+                      </span>
+                      <span
+                        style="transition-delay: 300ms;"
+                      >
+                        r
+                      </span>
+                      <span
+                        style="transition-delay: 350ms;"
+                      >
+                        d
+                      </span>
+                    </label>
+                  </div>
+                  <div
+                    class="CustomInput"
+                  >
+                    <input
+                      autocomplete="new-password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      required=""
+                      type="password"
+                      value=""
+                    />
+                    <label
+                      for="confirmPassword"
+                    >
+                      <span
+                        style="transition-delay: 0ms;"
+                      >
+                        C
+                      </span>
+                      <span
+                        style="transition-delay: 50ms;"
+                      >
+                        o
+                      </span>
+                      <span
+                        style="transition-delay: 100ms;"
+                      >
+                        n
+                      </span>
+                      <span
+                        style="transition-delay: 150ms;"
+                      >
+                        f
+                      </span>
+                      <span
+                        style="transition-delay: 200ms;"
+                      >
+                        i
+                      </span>
+                      <span
+                        style="transition-delay: 250ms;"
+                      >
+                        r
+                      </span>
+                      <span
+                        style="transition-delay: 300ms;"
+                      >
+                        m
+                      </span>
+                      <span
+                        style="transition-delay: 350ms;"
+                      >
+                         
+                      </span>
+                      <span
+                        style="transition-delay: 400ms;"
+                      >
+                        P
+                      </span>
+                      <span
+                        style="transition-delay: 450ms;"
+                      >
+                        a
+                      </span>
+                      <span
+                        style="transition-delay: 500ms;"
+                      >
+                        s
+                      </span>
+                      <span
+                        style="transition-delay: 550ms;"
+                      >
+                        s
+                      </span>
+                      <span
+                        style="transition-delay: 600ms;"
+                      >
+                        w
+                      </span>
+                      <span
+                        style="transition-delay: 650ms;"
+                      >
+                        o
+                      </span>
+                      <span
+                        style="transition-delay: 700ms;"
+                      >
+                        r
+                      </span>
+                      <span
+                        style="transition-delay: 750ms;"
+                      >
+                        d
+                      </span>
+                    </label>
+                  </div>
+                  <button
+                    class="my-2 btn btn-primary"
+                    type="submit"
+                  >
+                    Register
+                  </button>
+                </form>
+                <div
+                  class="py-3 row"
+                >
+                  <div
+                    class="col"
+                  >
+                    Have an Account? 
+                    <a
+                      href="/login?redirect=/"
+                    >
+                      Login
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-6"
+      >
+        <div
+          class="FormContainer"
+        >
+          <div
+            class="container"
+          >
+            <div
+              class="justify-content-md-center row"
+            >
+              <div
+                class="col-md-6 col-12"
+              >
+                <div
+                  class="PasswordGenerator"
+                >
+                  <h2>
+                    Password Generator
+                  </h2>
+                  <div
+                    class="resultContainer"
+                  >
+                    <span
+                      id="result"
+                    />
+                    <button
+                      class="btn"
+                      id="clipboard"
+                    >
+                      <i
+                        class="far fa-clipboard"
+                      />
+                    </button>
+                  </div>
+                  <div
+                    class="settings"
+                  >
+                    <div
+                      class="setting"
+                    >
+                      <label
+                        for="length"
+                      >
+                        Password Length (6-20)
+                      </label>
+                      <input
+                        id="length"
+                        max="20"
+                        min="6"
+                        type="number"
+                        value="10"
+                      />
+                    </div>
+                    <div
+                      class="setting"
+                    >
+                      <label
+                        for="uppercase"
+                      >
+                        Include uppercase letters
+                      </label>
+                      <input
+                        checked=""
+                        id="uppercase"
+                        type="checkbox"
+                      />
+                    </div>
+                    <div
+                      class="setting"
+                    >
+                      <label
+                        for="lowercase"
+                      >
+                        Include lowercase letters
+                      </label>
+                      <input
+                        checked=""
+                        id="lowercase"
+                        type="checkbox"
+                      />
+                    </div>
+                    <div
+                      class="setting"
+                    >
+                      <label
+                        for="numbers"
+                      >
+                        Include numbers
+                      </label>
+                      <input
+                        checked=""
+                        id="numbers"
+                        type="checkbox"
+                      />
+                    </div>
+                    <div
+                      class="setting"
+                    >
+                      <label
+                        for="symbols"
+                      >
+                        Include symbols
+                      </label>
+                      <input
+                        checked=""
+                        id="symbols"
+                        type="checkbox"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="btn btn-large"
+                    id="generate"
+                  >
+                    Generate Password
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

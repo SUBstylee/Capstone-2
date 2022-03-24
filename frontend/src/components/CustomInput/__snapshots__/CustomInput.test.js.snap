@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="CustomInput"
+  >
+    <input
+      autocomplete="current-name"
+      id="name"
+      name="name"
+      type="text"
+    />
+    <label
+      for="name"
+    >
+      <span
+        style="transition-delay: 0ms;"
+      >
+        F
+      </span>
+      <span
+        style="transition-delay: 50ms;"
+      >
+        u
+      </span>
+      <span
+        style="transition-delay: 100ms;"
+      >
+        l
+      </span>
+      <span
+        style="transition-delay: 150ms;"
+      >
+        l
+      </span>
+      <span
+        style="transition-delay: 200ms;"
+      >
+         
+      </span>
+      <span
+        style="transition-delay: 250ms;"
+      >
+        N
+      </span>
+      <span
+        style="transition-delay: 300ms;"
+      >
+        a
+      </span>
+      <span
+        style="transition-delay: 350ms;"
+      >
+        m
+      </span>
+      <span
+        style="transition-delay: 400ms;"
+      >
+        e
+      </span>
+    </label>
+  </div>
+</DocumentFragment>
+`;
