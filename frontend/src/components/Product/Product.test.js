@@ -36,7 +36,7 @@ describe('test', () => {
         };
     });
 
-    test("renders Footer component without crashing", () => {
+    test("renders Product component without crashing", () => {
         const { getByText } = render(
             <BrowserRouter>
                 <Product product={product} />

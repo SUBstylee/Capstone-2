@@ -6,7 +6,13 @@ import store from './store';
 
 test('renders App component without crashing', () => {
   const { getByText } = render(<Provider store={store}><BrowserRouter><App /></BrowserRouter></Provider>);
-  expect(getByText("Welcome to Totally Awesome Apparel")).toBeInTheDocument();
+  expect(getByText("Hats")).toBeInTheDocument();
+  expect(getByText("Shoes")).toBeInTheDocument();
+  expect(getByText("Jackets")).toBeInTheDocument();
+  expect(getByText("Women")).toBeInTheDocument();
+  expect(getByText("Men")).toBeInTheDocument();
+  expect(getByText("All")).toBeInTheDocument();
+  expect(getByText("Copyright © Totally Awesome Apparel")).toBeInTheDocument();
 });
 
 test("matches snapshot", function () {

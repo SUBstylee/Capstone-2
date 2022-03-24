@@ -1,16 +1,18 @@
-import { useEffect,useState } from "react";
-import axios from "axios";
-import { useNavigate,Link, useParams } from "react-router-dom";
+import { useEffect,useState } from 'react';
+import axios from 'axios';
+import { useNavigate,Link, useParams } from 'react-router-dom';
 import {Row,Col,ListGroup,Image,Card,Button} from 'react-bootstrap';
-import { useDispatch,useSelector } from "react-redux";
-import Message from "../../components/Message/Message";
+import { useDispatch,useSelector } from 'react-redux';
+import Message from '../../components/Message/Message';
 import Loader from '../../components/Loader/Loader';
-import { deliverOrder, getOrderDetails,payOrder } from "../../actions/orderActions";
-import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from "../../constants/orderConstants";
+import { deliverOrder, getOrderDetails,listMyOrders,payOrder } from '../../actions/orderActions';
+import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from '../../constants/orderConstants';
 import {PayPalButton} from 'react-paypal-button-v2';
-// will add stripe payments during polish phase
-// import StripeCheckout from 'react-stripe-checkout';
-import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
+import MetaWrapper from '../../components/MetaWrapper/MetaWrapper';
+import StripeCheckout from 'react-stripe-checkout';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+toast.configure();
 
 const Order = () => {
     const {id}=useParams();
@@ -26,6 +28,22 @@ const Order = () => {
     const {loading:loadingPay,success:successPay}=orderPay;
     const orderDeliver=useSelector(state=>state.orderDeliver);
     const {loading:loadingDeliver,success:successDeliver}=orderDeliver;
+
+    const paymentMethod = localStorage.getItem('paymentMethod')
+    ? JSON.parse(localStorage.getItem('paymentMethod'))
+    : [];
+
+    if (!loading) {
+        // Convert to 2 decimal points //
+        const addDecimals = (num) => {
+          return (Math.round(num * 100) / 100).toFixed(2);
+        };
+    
+        // Calculate itemsPrice //
+        order.itemsPrice = addDecimals(
+          order.orderItems.reduce((acc, item) => acc + item.price * item.qty, 0),
+        );
+      };
 
     useEffect(()=>{
         if (!userInfo) {
@@ -46,6 +64,7 @@ const Order = () => {
             dispatch({type:ORDER_PAY_RESET});
             dispatch({type:ORDER_DELIVER_RESET});
             dispatch(getOrderDetails(id));
+            dispatch(listMyOrders());
         }else if(!order.isPaid){
             if(!window.paypal){
                 addPayPalScript();
@@ -56,7 +75,6 @@ const Order = () => {
     },[order,id,dispatch,successPay,successDeliver,navigate,userInfo]);
 
     const successPaymentHandler=(paymentResult)=>{
-        console.log(paymentResult);
         dispatch(payOrder(id,paymentResult));
     };
 
@@ -65,7 +83,7 @@ const Order = () => {
     };
 
     return loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
-        <div className="Order">
+        <div className='Order'>
             <MetaWrapper title='TAA-Order'/>
             <h1>Order {order._id}</h1>
             <Row>
@@ -98,7 +116,7 @@ const Order = () => {
                         <ListGroup.Item>
                             <h2>Items In Order</h2>
                             {order.orderItems.length===0? <Message>Order is empty...</Message>:(
-                                <ListGroup variant="flush">
+                                <ListGroup variant='flush'>
                                     {order.orderItems.map((item,index)=>(
                                         <ListGroup.Item key={index}>
                                             <Row>
@@ -128,31 +146,31 @@ const Order = () => {
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Subtotal</Col>
-                                    <Col>${order.itemsPrice.toFixed(2)}</Col>
+                                    <Col>${order.itemsPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Shipping</Col>
-                                    <Col>${order.shippingPrice.toFixed(2)}</Col>
+                                    <Col>${order.shippingPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Tax</Col>
-                                    <Col>${order.taxPrice.toFixed(2)}</Col>
+                                    <Col>${order.taxPrice}</Col>
                                 </Row>
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Row>
                                     <Col>Total</Col>
-                                    <Col><strong>${order.totalPrice.toFixed(2)}</strong></Col>
+                                    <Col><strong>${order.totalPrice}</strong></Col>
                                 </Row>
                             </ListGroup.Item>
                             {!order.isPaid&&(
                                 <ListGroup.Item>
                                     {loadingPay&&<Loader/>}
-                                    {!sdkReady?<Loader/>:<PayPalButton amount={order.totalPrice.toFixed(2)} onSuccess={successPaymentHandler}/>}
+                                    {!sdkReady?<Loader/>:<PayPalButton amount={order.totalPrice} onSuccess={successPaymentHandler}/>}
                                 </ListGroup.Item>
                             )}
                             {loadingDeliver&&<Loader/>}

@@ -47,10 +47,20 @@ exports[`matches snapshot 1`] = `
                 data-rr-ui-event-key="/cart"
                 href="/cart"
               >
-                <i
-                  class="fa-solid fa-cart-shopping"
-                />
-                 Cart
+                <span
+                  class="fa-layers fa-fw"
+                >
+                  <i
+                    class="fas fa-shopping-cart fa-lg"
+                  />
+                  <span
+                    class="fa-layers-counter fa-layers-top-left"
+                    style="background: rgb(252, 145, 126); border-radius: 50%; padding: 0px 6px; margin-right: 1px;"
+                  >
+                    0
+                  </span>
+                </span>
+                Cart
               </a>
               <a
                 class="nav-link"
@@ -62,14 +72,110 @@ exports[`matches snapshot 1`] = `
                 />
                  Sign In
               </a>
+              <a
+                class="nav-link"
+                data-rr-ui-event-key="/register"
+                href="/register"
+              >
+                <i
+                  class="fa-solid fa-user-plus"
+                />
+                 Register
+              </a>
+              <div
+                class="Search "
+              >
+                <form
+                  class=""
+                >
+                  <input
+                    class="Search-input"
+                    name="q"
+                    placeholder="Search Products..."
+                    type="text"
+                  />
+                </form>
+                <button
+                  class="Search-btn"
+                >
+                  <i
+                    class="fas fa-search"
+                  />
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </nav>
+      <nav
+        class="Header-cats navbar navbar-expand navbar-light bg-white"
+      >
+        <div
+          class="mx-auto navbar-nav"
+        >
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__Hats__"
+            href="/search/__Hats__"
+          >
+            <i
+              class="fa-solid fa-hat-cowboy"
+            />
+             Hats
+          </a>
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__Shoes__"
+            href="/search/__Shoes__"
+          >
+            <i
+              class="fa-solid fa-shoe-prints"
+            />
+             Shoes
+          </a>
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__Jackets__"
+            href="/search/__Jackets__"
+          >
+            <i
+              class="fa-solid fa-shirt"
+            />
+             Jackets
+          </a>
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__Women__"
+            href="/search/__Women__"
+          >
+            <i
+              class="fa-solid fa-person"
+            />
+             Women
+          </a>
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__Men__"
+            href="/search/__Men__"
+          >
+            <i
+              class="fa-solid fa-person-dress"
+            />
+             Men
+          </a>
+          <a
+            class="nav-link"
+            data-rr-ui-event-key="/search/__All__"
+            href="/search/__All__"
+          >
+            <i
+              class="fa-solid fa-list-ul"
+            />
+             All
+          </a>
+        </div>
+      </nav>
     </header>
-    <h1>
-      Welcome to Totally Awesome Apparel
-    </h1>
     <main
       class="py-3"
     >
@@ -80,37 +186,276 @@ exports[`matches snapshot 1`] = `
           class="Home"
         >
           <h1>
-            Latest Products
+            Welcome to Totally Awesome Apparel!
           </h1>
           <div
-            class="Loader"
+            class="Toast "
+            style="top: 50px; right: 25px;"
           >
-            <span
-              class="sr-only"
+            <button
+              class="btn-sm btn btn-danger"
+              type="button"
             >
-              Loading...
-            </span>
+              <i
+                class="fa-solid fa-x"
+              />
+            </button>
+            <h4>
+              Not a real store!
+            </h4>
+            <p>
+              This site was built using the MERN stack. Payments are in test mode, so you will not be charged. There are no real products here.
+            </p>
           </div>
-        </div>
-        <footer
-          class="Footer"
-        >
           <div
-            class="container"
+            class="Directory"
           >
             <div
-              class="row"
+              class="MenuItem"
             >
               <div
-                class="text-center py-3 col"
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/hats.png);"
+              />
+              <div
+                class="content"
               >
-                Copyright © Totally Awesome Apparel
+                <h1
+                  class="title"
+                >
+                  HATS
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
+              </div>
+            </div>
+            <div
+              class="MenuItem"
+            >
+              <div
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/jackets.png);"
+              />
+              <div
+                class="content"
+              >
+                <h1
+                  class="title"
+                >
+                  JACKETS
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
+              </div>
+            </div>
+            <div
+              class="MenuItem"
+            >
+              <div
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/sneakers.png);"
+              />
+              <div
+                class="content"
+              >
+                <h1
+                  class="title"
+                >
+                  SHOES
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
+              </div>
+            </div>
+            <div
+              class="MenuItem"
+            >
+              <div
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/womens.png);"
+              />
+              <div
+                class="content"
+              >
+                <h1
+                  class="title"
+                >
+                  WOMEN
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
+              </div>
+            </div>
+            <div
+              class="MenuItem"
+            >
+              <div
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/men.png);"
+              />
+              <div
+                class="content"
+              >
+                <h1
+                  class="title"
+                >
+                  MEN
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
+              </div>
+            </div>
+            <div
+              class="MenuItem"
+            >
+              <div
+                class="background-image"
+                style="background-image: url(/assets/images/shop-img/sample.png);"
+              />
+              <div
+                class="content"
+              >
+                <h1
+                  class="title"
+                >
+                  ALL
+                </h1>
+                <span
+                  class="subtitle"
+                >
+                  SHOP NOW
+                </span>
               </div>
             </div>
           </div>
-        </footer>
+          <div
+            class="TopProducts"
+          >
+            <div
+              class="Loader"
+            >
+              <span
+                class="sr-only"
+              >
+                Loading...
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <footer
+      class="Footer"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="text-center col"
+          >
+            Copyright © Totally Awesome Apparel
+          </div>
+        </div>
+        <div
+          class="row"
+        >
+          <div
+            class="text-center col"
+          >
+            <a
+              class="btn"
+              href="https://github.com/SUBstylee"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-github"
+              />
+            </a>
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/jeremy-threlfall/"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(0, 130, 202); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-linkedin-in"
+              />
+            </a>
+            <a
+              class="btn"
+              href="https://line.me/R/ti/p/substylee"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(6, 199, 85); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-line"
+              />
+            </a>
+            <a
+              class="btn"
+              href="https://twitter.com/jjthrelfall"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(85, 172, 238); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-twitter"
+              />
+            </a>
+            <a
+              class="btn"
+              href="https://www.facebook.com/substylee"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(59, 89, 152); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-facebook-f"
+              />
+            </a>
+            <a
+              class="btn"
+              href="https://www.instagram.com/jjthrelfall/"
+              rel="noopener noreferrer"
+              role="button"
+              style="background-color: rgb(172, 43, 172); color: rgb(255, 255, 255);"
+              target="_blank"
+            >
+              <i
+                class="fab fa-instagram"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </DocumentFragment>
 `;

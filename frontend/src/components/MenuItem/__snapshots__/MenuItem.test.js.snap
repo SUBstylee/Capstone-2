@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MenuItem"
+  >
+    <div
+      class="background-image"
+      style="background-image: url(/assets/images/shop-img/hats.png);"
+    />
+    <div
+      class="content"
+    >
+      <h1
+        class="title"
+      >
+        HATS
+      </h1>
+      <span
+        class="subtitle"
+      >
+        SHOP NOW
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

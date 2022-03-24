@@ -29,7 +29,7 @@ const responsive = {
     },
   };
 
-const TopProducts = () => {
+const TopProducts = ({test}) => {
     const dispatch=useDispatch();
     const productTopRated=useSelector(state=>state.productTopRated);
     const {loading,error,products} =productTopRated;
@@ -41,6 +41,7 @@ const TopProducts = () => {
 
     return (
         <div className="TopProducts">
+            {test&&<p>{test}</p>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
                 <>
                 <h3 className='carousel-title m-0 p-3 text-dark'>Top Rated Products</h3>

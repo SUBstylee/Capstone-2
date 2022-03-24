@@ -41,7 +41,7 @@ const Payment = () => {
                         </Col>
                         <Col xs={2}>
                             <Form.Check type='radio' label='PayPal' id='PayPal' name='paymentMethod' value='PayPal' checked onChange={(e)=>setPaymentMethod(e.target.value)}></Form.Check>
-                            <Form.Check type='radio' label='Stripe' id='Stripe' name='paymentMethod' value='Stripe' onChange={(e)=>setPaymentMethod(e.target.value)}></Form.Check>
+                            <Form.Check type='radio' label='Stripe' id='Stripe' name='paymentMethod' value='Stripe' onChange={(e)=>setPaymentMethod(e.target.value)} disabled></Form.Check>
                         </Col>
                         </Row>
                     </Form.Group>

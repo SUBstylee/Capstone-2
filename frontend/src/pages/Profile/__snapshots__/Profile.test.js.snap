@@ -1,0 +1,364 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Profile"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-lg-4"
+      >
+        <h2>
+          User Profile
+        </h2>
+        <form
+          class=""
+        >
+          <div
+            class="CustomInput"
+          >
+            <input
+              autocomplete="current-name"
+              id="name"
+              name="name"
+              required=""
+              type="text"
+              value=""
+            />
+            <label
+              for="name"
+            >
+              <span
+                style="transition-delay: 0ms;"
+              >
+                F
+              </span>
+              <span
+                style="transition-delay: 50ms;"
+              >
+                u
+              </span>
+              <span
+                style="transition-delay: 100ms;"
+              >
+                l
+              </span>
+              <span
+                style="transition-delay: 150ms;"
+              >
+                l
+              </span>
+              <span
+                style="transition-delay: 200ms;"
+              >
+                 
+              </span>
+              <span
+                style="transition-delay: 250ms;"
+              >
+                N
+              </span>
+              <span
+                style="transition-delay: 300ms;"
+              >
+                a
+              </span>
+              <span
+                style="transition-delay: 350ms;"
+              >
+                m
+              </span>
+              <span
+                style="transition-delay: 400ms;"
+              >
+                e
+              </span>
+            </label>
+          </div>
+          <div
+            class="CustomInput"
+          >
+            <input
+              autocomplete="current-email"
+              id="email"
+              name="email"
+              required=""
+              type="email"
+              value=""
+            />
+            <label
+              for="email"
+            >
+              <span
+                style="transition-delay: 0ms;"
+              >
+                E
+              </span>
+              <span
+                style="transition-delay: 50ms;"
+              >
+                m
+              </span>
+              <span
+                style="transition-delay: 100ms;"
+              >
+                a
+              </span>
+              <span
+                style="transition-delay: 150ms;"
+              >
+                i
+              </span>
+              <span
+                style="transition-delay: 200ms;"
+              >
+                l
+              </span>
+              <span
+                style="transition-delay: 250ms;"
+              >
+                 
+              </span>
+              <span
+                style="transition-delay: 300ms;"
+              >
+                A
+              </span>
+              <span
+                style="transition-delay: 350ms;"
+              >
+                d
+              </span>
+              <span
+                style="transition-delay: 400ms;"
+              >
+                d
+              </span>
+              <span
+                style="transition-delay: 450ms;"
+              >
+                r
+              </span>
+              <span
+                style="transition-delay: 500ms;"
+              >
+                e
+              </span>
+              <span
+                style="transition-delay: 550ms;"
+              >
+                s
+              </span>
+              <span
+                style="transition-delay: 600ms;"
+              >
+                s
+              </span>
+            </label>
+          </div>
+          <div
+            class="CustomInput"
+          >
+            <input
+              autocomplete="new-password"
+              id="password"
+              name="password"
+              required=""
+              type="password"
+              value=""
+            />
+            <label
+              for="password"
+            >
+              <span
+                style="transition-delay: 0ms;"
+              >
+                P
+              </span>
+              <span
+                style="transition-delay: 50ms;"
+              >
+                a
+              </span>
+              <span
+                style="transition-delay: 100ms;"
+              >
+                s
+              </span>
+              <span
+                style="transition-delay: 150ms;"
+              >
+                s
+              </span>
+              <span
+                style="transition-delay: 200ms;"
+              >
+                w
+              </span>
+              <span
+                style="transition-delay: 250ms;"
+              >
+                o
+              </span>
+              <span
+                style="transition-delay: 300ms;"
+              >
+                r
+              </span>
+              <span
+                style="transition-delay: 350ms;"
+              >
+                d
+              </span>
+            </label>
+          </div>
+          <div
+            class="CustomInput"
+          >
+            <input
+              autocomplete="new-password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required=""
+              type="password"
+              value=""
+            />
+            <label
+              for="confirmPassword"
+            >
+              <span
+                style="transition-delay: 0ms;"
+              >
+                C
+              </span>
+              <span
+                style="transition-delay: 50ms;"
+              >
+                o
+              </span>
+              <span
+                style="transition-delay: 100ms;"
+              >
+                n
+              </span>
+              <span
+                style="transition-delay: 150ms;"
+              >
+                f
+              </span>
+              <span
+                style="transition-delay: 200ms;"
+              >
+                i
+              </span>
+              <span
+                style="transition-delay: 250ms;"
+              >
+                r
+              </span>
+              <span
+                style="transition-delay: 300ms;"
+              >
+                m
+              </span>
+              <span
+                style="transition-delay: 350ms;"
+              >
+                 
+              </span>
+              <span
+                style="transition-delay: 400ms;"
+              >
+                P
+              </span>
+              <span
+                style="transition-delay: 450ms;"
+              >
+                a
+              </span>
+              <span
+                style="transition-delay: 500ms;"
+              >
+                s
+              </span>
+              <span
+                style="transition-delay: 550ms;"
+              >
+                s
+              </span>
+              <span
+                style="transition-delay: 600ms;"
+              >
+                w
+              </span>
+              <span
+                style="transition-delay: 650ms;"
+              >
+                o
+              </span>
+              <span
+                style="transition-delay: 700ms;"
+              >
+                r
+              </span>
+              <span
+                style="transition-delay: 750ms;"
+              >
+                d
+              </span>
+            </label>
+          </div>
+          <button
+            class="my-2 btn btn-primary"
+            type="submit"
+          >
+            Update
+          </button>
+        </form>
+      </div>
+      <div
+        class="col-lg-8"
+      >
+        <h2>
+          My Orders
+        </h2>
+        <div
+          class="table-responsive"
+        >
+          <table
+            class="table-sm align-items-center table table-striped table-bordered table-hover"
+            style="text-align: center;"
+          >
+            <thead>
+              <tr>
+                <th>
+                  ID
+                </th>
+                <th>
+                  DATE
+                </th>
+                <th>
+                  TOTAL
+                </th>
+                <th>
+                  PAID
+                </th>
+                <th>
+                  DELIVERED
+                </th>
+                <th>
+                  ACTIONS
+                </th>
+              </tr>
+            </thead>
+            <tbody />
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -44,10 +44,20 @@ exports[`matches snapshot 1`] = `
               data-rr-ui-event-key="/cart"
               href="/cart"
             >
-              <i
-                class="fa-solid fa-cart-shopping"
-              />
-               Cart
+              <span
+                class="fa-layers fa-fw"
+              >
+                <i
+                  class="fas fa-shopping-cart fa-lg"
+                />
+                <span
+                  class="fa-layers-counter fa-layers-top-left"
+                  style="background: rgb(252, 145, 126); border-radius: 50%; padding: 0px 6px; margin-right: 1px;"
+                >
+                  0
+                </span>
+              </span>
+              Cart
             </a>
             <a
               class="nav-link"
@@ -59,8 +69,107 @@ exports[`matches snapshot 1`] = `
               />
                Sign In
             </a>
+            <a
+              class="nav-link"
+              data-rr-ui-event-key="/register"
+              href="/register"
+            >
+              <i
+                class="fa-solid fa-user-plus"
+              />
+               Register
+            </a>
+            <div
+              class="Search "
+            >
+              <form
+                class=""
+              >
+                <input
+                  class="Search-input"
+                  name="q"
+                  placeholder="Search Products..."
+                  type="text"
+                />
+              </form>
+              <button
+                class="Search-btn"
+              >
+                <i
+                  class="fas fa-search"
+                />
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+    </nav>
+    <nav
+      class="Header-cats navbar navbar-expand navbar-light bg-white"
+    >
+      <div
+        class="mx-auto navbar-nav"
+      >
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__Hats__"
+          href="/search/__Hats__"
+        >
+          <i
+            class="fa-solid fa-hat-cowboy"
+          />
+           Hats
+        </a>
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__Shoes__"
+          href="/search/__Shoes__"
+        >
+          <i
+            class="fa-solid fa-shoe-prints"
+          />
+           Shoes
+        </a>
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__Jackets__"
+          href="/search/__Jackets__"
+        >
+          <i
+            class="fa-solid fa-shirt"
+          />
+           Jackets
+        </a>
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__Women__"
+          href="/search/__Women__"
+        >
+          <i
+            class="fa-solid fa-person"
+          />
+           Women
+        </a>
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__Men__"
+          href="/search/__Men__"
+        >
+          <i
+            class="fa-solid fa-person-dress"
+          />
+           Men
+        </a>
+        <a
+          class="nav-link"
+          data-rr-ui-event-key="/search/__All__"
+          href="/search/__All__"
+        >
+          <i
+            class="fa-solid fa-list-ul"
+          />
+           All
+        </a>
       </div>
     </nav>
   </header>

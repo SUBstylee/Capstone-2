@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="CheckoutSteps"
+  >
+    <div
+      class="justify-content-center mb-4 nav"
+    >
+      <div
+        class="nav-item"
+      >
+        <a
+          aria-disabled="true"
+          class="nav-link disabled"
+          role="button"
+        >
+          Sign In
+        </a>
+      </div>
+      <div
+        class="nav-item"
+      >
+        <a
+          aria-disabled="true"
+          class="nav-link disabled"
+          role="button"
+        >
+          Shipping
+        </a>
+      </div>
+      <div
+        class="nav-item"
+      >
+        <a
+          aria-disabled="true"
+          class="nav-link disabled"
+          role="button"
+        >
+          Payment
+        </a>
+      </div>
+      <div
+        class="nav-item"
+      >
+        <a
+          aria-disabled="true"
+          class="nav-link disabled"
+          role="button"
+        >
+          Place Order
+        </a>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

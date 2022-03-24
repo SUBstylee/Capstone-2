@@ -9,7 +9,7 @@ test("renders Login component without crashing", () => {
         <Provider store={store}><BrowserRouter><Login /></BrowserRouter></Provider>
     );
 
-    expect(getByText("Sign In")).toBeInTheDocument();
+    expect(getByText("New Customer?")).toBeInTheDocument();
 });
 
 test("matches snapshot", function () {

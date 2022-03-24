@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="UserList"
+  >
+    <h1>
+      Users
+    </h1>
+    <div
+      class="table-responsive"
+    >
+      <table
+        class="table-sm table table-striped table-bordered table-hover"
+        style="text-align: center;"
+      >
+        <thead>
+          <tr>
+            <th>
+              ID
+            </th>
+            <th>
+              NAME
+            </th>
+            <th>
+              EMAIL
+            </th>
+            <th>
+              ADMIN
+            </th>
+            <th>
+              ACTIONS
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;
