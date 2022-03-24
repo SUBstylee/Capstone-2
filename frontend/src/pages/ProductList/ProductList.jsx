@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {Table,Button} from 'react-bootstrap';
 import {LinkContainer} from 'react-router-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
@@ -7,11 +7,13 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {listProducts,deleteProduct,createProduct} from '../../actions/productActions';
 import { PRODUCT_CREATE_RESET } from "../../constants/productConstants";
+import Paginate from "../../components/Paginate/Paginate";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const ProductList = () => {
     const dispatch=useDispatch();
     const productList=useSelector(state=>state.productList);
-    const {loading,error,products}=productList;
+    const {loading,error,products,page,pages}=productList;
     const productDelete=useSelector(state=>state.productDelete);
     const {loading:loadingDelete,error:errorDelete,success:successDelete}=productDelete;
     const productCreate=useSelector(state=>state.productCreate);
@@ -19,6 +21,8 @@ const ProductList = () => {
     const userLogin=useSelector(state=>state.userLogin);
     const {userInfo}=userLogin;
     const navigate=useNavigate();
+    const params=useParams();
+    const pageNumber=params.pageNumber||1;
 
     useEffect(()=>{
         dispatch({type:PRODUCT_CREATE_RESET});
@@ -28,9 +32,9 @@ const ProductList = () => {
         if(successCreate){
             navigate(`/admin/product/${createdProduct._id}/edit`);
         }else{
-            dispatch(listProducts());
+            dispatch(listProducts('',pageNumber));
         }
-    },[dispatch,userInfo,navigate,successDelete,successCreate,createdProduct]);
+    },[dispatch,userInfo,navigate,successDelete,successCreate,createdProduct,pageNumber]);
 
     const deleteHandler=(id)=>{
         // added confirmation in case of accidental click
@@ -44,7 +48,7 @@ const ProductList = () => {
     };
 
     return (
-        <div className="ProductList">
+        <div className="TAA-Product List">
             <h1>Products</h1>
             <Button className="my-3" onClick={createProductHandler}><i className="fa-solid fa-circle-plus"></i> Create Product</Button>
             {loadingDelete&&<Loader/>}
@@ -52,6 +56,8 @@ const ProductList = () => {
             {loadingCreate&&<Loader/>}
             {errorCreate&&<Message variant='danger'>{errorCreate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title='TAA-Home'/>
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>
                     <thead>
                         <tr>
@@ -81,6 +87,8 @@ const ProductList = () => {
                         ))}
                     </tbody>
                 </Table>
+                <Paginate pages={pages} page={page} isAdmin={true}/>
+                </>
             )}
         </div>
     );

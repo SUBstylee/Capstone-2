@@ -10,6 +10,7 @@ import { ORDER_PAY_RESET,ORDER_DELIVER_RESET } from "../../constants/orderConsta
 import {PayPalButton} from 'react-paypal-button-v2';
 // will add stripe payments during polish phase
 // import StripeCheckout from 'react-stripe-checkout';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const Order = () => {
     const {id}=useParams();
@@ -65,6 +66,7 @@ const Order = () => {
 
     return loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
         <div className="Order">
+            <MetaWrapper title='TAA-Order'/>
             <h1>Order {order._id}</h1>
             <Row>
                 <Col md={8}>

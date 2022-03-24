@@ -5,6 +5,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { saveShippingAddress } from "../../actions/cartActions";
 import FormContainer from "../../components/FormContainer/FormContainer";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const Shipping = () => {
     const cart=useSelector(state=>state.cart);
@@ -25,6 +26,7 @@ const Shipping = () => {
 
     return (
         <div className="Shipping">
+            <MetaWrapper title='TAA-Shipping'/>
             <FormContainer>
                 <CheckoutSteps step1 step2/>
                 <h1>Shipping</h1>

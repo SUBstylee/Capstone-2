@@ -1,6 +1,7 @@
 import { Navbar, Nav, Container,NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useDispatch,useSelector } from "react-redux";
+import './Header.scss';
 
 import brandLogo from "../../assets/images/logos/TAA-header-color-transparent.png";
 import { logout } from "../../actions/userActions";
@@ -52,11 +53,18 @@ const Header = () => {
                     <NavDropdown.Item onClick={logoutHandler}>Logout</NavDropdown.Item>
                 </NavDropdown>
               ):(
+                <>
                 <LinkContainer to='/login'>
                   <Nav.Link>
                     <i className='fa-solid fa-right-to-bracket'></i> Sign In
                   </Nav.Link>
                 </LinkContainer>
+                <LinkContainer to='/register'>
+                  <Nav.Link>
+                    <i className='fa-solid fa-user-plus'></i> Register
+                  </Nav.Link>
+                </LinkContainer>
+                </>
               )}
               {userInfo&&userInfo.isAdmin && (
                 <NavDropdown title='Admin' id='adminmenu'>
@@ -75,6 +83,40 @@ const Header = () => {
             </Nav>
           </Navbar.Collapse>
         </Container>
+      </Navbar>
+      <Navbar className="Header-cats" bg='white'>
+            <Nav className='mx-auto'>
+              <LinkContainer to='/search/__Hats__'>
+                <Nav.Link>
+                  <i className='fa-solid fa-hat-cowboy'></i> Hats
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/search/__Shoes__'>
+                <Nav.Link>
+                  <i className='fa-solid fa-shoe-prints'></i> Shoes
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/search/__Jackets__'>
+                <Nav.Link>
+                  <i className='fa-solid fa-shirt'></i> Jackets
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/search/__Women__'>
+                <Nav.Link>
+                  <i className='fa-solid fa-person'></i> Women
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/search/__Men__'>
+                <Nav.Link>
+                <i className='fa-solid fa-person-dress'></i> Men
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to='/search/__All__'>
+                <Nav.Link>
+                  <i className='fa-solid fa-list-ul'></i> All
+                </Nav.Link>
+              </LinkContainer>
+            </Nav>
       </Navbar>
     </header>
   );

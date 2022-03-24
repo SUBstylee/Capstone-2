@@ -6,6 +6,7 @@ import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {getUserDetails,updateUser} from '../../actions/userActions';
 import { USER_UPDATE_RESET } from "../../constants/userConstants";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
 
@@ -56,6 +57,8 @@ const UserEdit = () => {
             {loadingUpdate&&<Loader/>}
             {errorUpdate&&<Message variant='danger'>{errorUpdate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title={`TAA-Edit ${name}`}/>
                 <Form onSubmit={submitHandler}>
                 <Form.Group controlId='name'>
                     <Form.Label>Name</Form.Label>    
@@ -72,6 +75,7 @@ const UserEdit = () => {
                     Update
                 </Button>    
             </Form>
+            </>
             )}
         </FormContainer>
     </div>

@@ -6,6 +6,7 @@ import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import { listUsers,deleteUser } from "../../actions/userActions";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const UserList = () => {
     const dispatch=useDispatch();
@@ -36,6 +37,8 @@ const UserList = () => {
         <div className="UserList">
             <h1>Users</h1>
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title='TAA-User List'/>
                 <Table striped bordered hover responsive className="table-sm" style={{textAlign:'center'}}>
                     <thead>
                         <tr>
@@ -61,6 +64,7 @@ const UserList = () => {
                         ))}
                     </tbody>
                 </Table>
+                </>
             )}
         </div>
     );

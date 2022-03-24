@@ -5,9 +5,11 @@ import {LinkContainer} from 'react-router-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
+import CustomInput from "../../components/CustomInput/CustomInput";
 import {getUserDetails,updateUserProfile} from '../../actions/userActions';
 import {listMyOrders} from '../../actions/orderActions';
 import { USER_UPDATE_PROFILE_RESET } from "../../constants/userConstants";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const Profile = () => {
     const [name,setName]=useState('')
@@ -55,35 +57,56 @@ const Profile = () => {
   return (
     <div className="Profile">
         {loading&&<Loader/>}
+        <MetaWrapper title='TAA-Profile'/>
         <Row>
-            <Col md={3}>
+            <Col lg={4}>
                 <h2>User Profile</h2>
                 {message&&<Message variant='danger'>{message}</Message>}
                 {error&&<Message variant='danger'>{error}</Message>}
                 {success&&<Message variant='success'>Profile Updated!</Message>}
                 <Form onSubmit={submitHandler}>
-                    <Form.Group controlId='name'>
-                        <Form.Label>Name</Form.Label>    
-                        <Form.Control type='name' autoComplete="current-name" placeholder="Enter name" value={name} onChange={(e)=>setName(e.target.value)}></Form.Control>
-                    </Form.Group>    
-                    <Form.Group controlId='email'>
-                        <Form.Label>Email Address</Form.Label>    
-                        <Form.Control type='email' autoComplete="current-email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}></Form.Control>
-                    </Form.Group>    
-                    <Form.Group controlId='password'>
-                        <Form.Label>Password</Form.Label>    
-                        <Form.Control type='password' autoComplete="new-password" placeholder="Enter new password" value={password} onChange={(e)=>setPassword(e.target.value)}></Form.Control>
-                    </Form.Group>
-                    <Form.Group controlId='confirmPassword'>
-                        <Form.Label>Confirm Password</Form.Label>    
-                        <Form.Control type='password' autoComplete="new-password" placeholder="Confirm new password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}></Form.Control>
-                    </Form.Group>
+                <CustomInput 
+                    id='name' 
+                    type='text' 
+                    autoComplete="current-name" 
+                    name='name' 
+                    labelText='Full Name' 
+                    value={name} 
+                    required 
+                    onChange={(e)=>setName(e.target.value)}/>
+                <CustomInput 
+                    id='email' 
+                    type='email' 
+                    autoComplete="current-email" 
+                    name='email' 
+                    labelText='Email Address' 
+                    value={email} 
+                    required 
+                    onChange={(e)=>setEmail(e.target.value)}/>      
+                <CustomInput 
+                    id='password' 
+                    type='password' 
+                    autoComplete="new-password" 
+                    name='password'
+                    labelText='Password'
+                    value={password} 
+                    required 
+                    onChange={(e)=>setPassword(e.target.value)}/>   
+                <CustomInput
+                    id='confirmPassword'
+                    type='password'
+                    autoComplete="new-password"
+                    name='confirmPassword'
+                    labelText='Confirm Password'
+                    value={confirmPassword}
+                    required
+                    onChange={(e)=>setConfirmPassword(e.target.value)}/>
                     <Button className="my-2" type='submit' variant="primary">
                         Update
                     </Button>    
                 </Form>
             </Col>
-            <Col md={9}>
+            <Col lg={8}>
                 <h2>My Orders</h2>
                 {loadingOrders?(<Loader/>):errorOrders?(<Message variant='danger'>{errorOrders}</Message>):(
                     <Table striped bordered hover responsive className='table-sm align-items-center' style={{textAlign:'center'}}>
@@ -94,7 +117,7 @@ const Profile = () => {
                                 <th>TOTAL</th>
                                 <th>PAID</th>
                                 <th>DELIVERED</th>
-                                <th></th>
+                                <th>ACTIONS</th>
                             </tr>
                         </thead>
                         <tbody>

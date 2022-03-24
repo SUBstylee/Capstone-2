@@ -1,39 +1,28 @@
-import { useEffect } from "react";
-import {useDispatch,useSelector} from 'react-redux'
-import { Col, Row } from "react-bootstrap";
-import Product from "../../components/Product/Product";
+import Directory from "../../components/Directory/Directory";
+import Loader from "../../components/Loader/Loader";
 import Message from "../../components/Message/Message";
-import Loader from '../../components/Loader/Loader';
-import { listProducts } from "../../actions/productActions";
-import { useParams } from "react-router-dom";
+import TopProducts from "../../components/TopProducts/TopProducts";
+import { useSelector } from "react-redux";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
+import Toast from "../../components/Toast/Toast";
 
 const Home = () => {
-  const params=useParams();
-  const keyword=params.keyword;
-  const dispatch=useDispatch();
   const productList=useSelector(state=>state.productList);
-  const {loading,error,products}=productList;
-
-  useEffect(() => {
-    dispatch(listProducts(keyword))
-  }, [dispatch,keyword]);
+  const {loading,error}=productList;
 
   return (
     <div className='Home'>
-      <h1>Latest Products</h1>
-      {loading?(
-        <Loader/>
-      ):error?(
-        <Message variant='danger'>{error}</Message>
-      ):products.length>0?
-        <Row>
-          {products.map((product) => (
-            <Col className="mb-3" xs={12} sm={6} md={4} lg={3} key={product._id}>
-              <Product product={product} />
-            </Col>
-          ))}
-        </Row>:<h3>{`No products matching search '${keyword}' found!`}</h3>
-      }
+      <h1>Welcome to Totally Awesome Apparel!</h1>
+      <Toast top={`50px`} right={`25px`} time={15000} messageTitle={'Not a real store!'} messageText={'This site was built using the MERN stack. Payments are in test mode, so you will not be charged. There are no real products here.'}/>
+      {loading?
+      (<Loader/>):error?
+      (<Message variant='danger'>{error}</Message>):(
+        <>
+        <MetaWrapper title='TAA-Home'/>
+        <Directory/>
+        <TopProducts/>
+        </>
+      )}
     </div>
   );
 };

@@ -5,6 +5,7 @@ import {Row,Col,ListGroup,Image,Form,Button,Card} from 'react-bootstrap';
 import Message from '../../components/Message/Message';
 // import Loader from '../../components/Loader/Loader';
 import {addToCart,removeFromCart} from '../../actions/cartActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const Cart = () => {
   
@@ -32,6 +33,7 @@ const Cart = () => {
 
   return (
     <div className='Cart'>
+      <MetaWrapper title='TAA-Cart'/>
       <Row>
         <Col md={8}>
           <h1>Shopping Cart</h1>

@@ -6,6 +6,7 @@ import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
 import {listProductDetails,updateProduct} from '../../actions/productActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 
 import FormContainer from "../../components/FormContainer/FormContainer";
@@ -99,6 +100,8 @@ const ProductEdit = () => {
             {loadingUpdate&&<Loader/>}
             {errorUpdate&&<Message variant='danger'>{errorUpdate}</Message>}
             {loading?(<Loader/>):error?(<Message variant='danger'>{error}</Message>):(
+                <>
+                <MetaWrapper title={`TAA-Edit ${product.name}`}/>
                 <Form onSubmit={submitHandler}>
                 <Form.Group controlId='name'>
                     <Form.Label>Name</Form.Label>    
@@ -120,7 +123,14 @@ const ProductEdit = () => {
                 </Form.Group>    
                 <Form.Group controlId='category'>
                     <Form.Label>Category</Form.Label>    
-                    <Form.Control type='text' autoComplete="current-category" placeholder="Enter category" value={category} onChange={(e)=>setCategory(e.target.value)}></Form.Control>
+                    <Form.Control as='select' required value={category} onChange={(e)=>setCategory(e.target.value)}>
+                      <option value=''>Select a category</option>
+                      <option value='__hats__'>Hats</option>
+                      <option value='__shoes__'>Shoes</option>
+                      <option value='__jackets__'>Jackets</option>
+                      <option value='__men__'>Men</option>
+                      <option value='__women__'>Women</option>
+                    </Form.Control>
                 </Form.Group>
                 <Form.Group controlId='countInStock'>
                     <Form.Label>Quantity</Form.Label>    
@@ -128,12 +138,13 @@ const ProductEdit = () => {
                 </Form.Group>
                 <Form.Group controlId='description'>
                     <Form.Label>Description</Form.Label>    
-                    <Form.Control type='text' autoComplete="current-description" placeholder="Enter description" value={description} onChange={(e)=>setDescription(e.target.value)}></Form.Control>
+                    <Form.Control as='textarea' rows='5' autoComplete="current-description" placeholder="Enter description" value={description} onChange={(e)=>setDescription(e.target.value)}></Form.Control>
                 </Form.Group>
                 <Button className="my-2" type='submit' variant="primary">
                     Update
                 </Button>    
             </Form>
+            </>
             )}
         </FormContainer>
     </div>

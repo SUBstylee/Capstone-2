@@ -4,9 +4,12 @@ import {Form,Button,Row,Col} from 'react-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
+import CustomInput from "../../components/CustomInput/CustomInput";
 import {register} from '../../actions/userActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
+import PasswordGenerator from "../../components/PasswordGenerator/PasswordGenerator";
 
 const Register = () => {
     const [name,setName]=useState('')
@@ -40,28 +43,51 @@ const Register = () => {
 
   return (
     <div className="Login">
+        <Row>
+            <Col lg={6}>
         <FormContainer>
             <h1>Sign Up</h1>
             {message&&<Message variant='danger'>{message}</Message>}
             {error&&<Message variant='danger'>{error}</Message>}
             {loading&&<Loader/>}
-            <Form onSubmit={submitHandler}>
-                <Form.Group controlId='name'>
-                    <Form.Label>Name</Form.Label>    
-                    <Form.Control type='name' autoComplete="current-name" placeholder="Enter name" value={name} onChange={(e)=>setName(e.target.value)}></Form.Control>
-                </Form.Group>    
-                <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>    
-                    <Form.Control type='email' autoComplete="current-email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}></Form.Control>
-                </Form.Group>    
-                <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>    
-                    <Form.Control type='password' autoComplete="new-password" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)}></Form.Control>
-                </Form.Group>
-                <Form.Group controlId='confirmPassword'>
-                    <Form.Label>Confirm Password</Form.Label>    
-                    <Form.Control type='password' autoComplete="new-password" placeholder="Confirm password" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}></Form.Control>
-                </Form.Group>
+            <MetaWrapper title='TAA-Register'/>
+            <Form onSubmit={submitHandler}>   
+                <CustomInput 
+                    id='name' 
+                    type='text' 
+                    autoComplete="current-name" 
+                    name='name' 
+                    labelText='Full Name' 
+                    value={name} 
+                    required 
+                    onChange={(e)=>setName(e.target.value)}/>
+                <CustomInput 
+                    id='email' 
+                    type='email' 
+                    autoComplete="current-email" 
+                    name='email' 
+                    labelText='Email Address' 
+                    value={email} 
+                    required 
+                    onChange={(e)=>setEmail(e.target.value)}/>      
+                <CustomInput 
+                    id='password' 
+                    type='password' 
+                    autoComplete="new-password" 
+                    name='password'
+                    labelText='Password'
+                    value={password} 
+                    required 
+                    onChange={(e)=>setPassword(e.target.value)}/>   
+                <CustomInput
+                    id='confirmPassword'
+                    type='password'
+                    autoComplete="new-password"
+                    name='confirmPassword'
+                    labelText='Confirm Password'
+                    value={confirmPassword}
+                    required
+                    onChange={(e)=>setConfirmPassword(e.target.value)}/>
                 <Button className="my-2" type='submit' variant="primary">
                     Register
                 </Button>    
@@ -72,6 +98,14 @@ const Register = () => {
                 </Col>    
             </Row>
         </FormContainer>
+        </Col>
+        <Col lg={6}>
+            <FormContainer>
+                <PasswordGenerator/>
+            </FormContainer>
+            
+        </Col>
+        </Row>
     </div>
   );
 };

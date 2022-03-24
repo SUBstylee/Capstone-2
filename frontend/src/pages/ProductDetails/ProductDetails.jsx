@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { listProductDetails,createProductReview } from "../../actions/productActions";
 import { PRODUCT_CREATE_REVIEW_RESET } from "../../constants/productConstants";
+import CustomTextArea from "../../components/CustomTextArea/CustomTextArea";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 const ProductDetails = () => {
   const [qty,setQty]=useState(1);
@@ -65,6 +67,7 @@ const ProductDetails = () => {
         <Message variant='danger'>{error}</Message>
       ):(
         <>
+        <MetaWrapper title={`TAA-${product.name}`}/>
         <Row>
         <Col md={6}>
           <Image src={product.image} alt={product.name} fluid />
@@ -164,10 +167,14 @@ const ProductDetails = () => {
                       <option value='5'>5 - Great</option>
                     </Form.Control>
                   </Form.Group>
-                  <Form.Group controlId="comment">
-                    <Form.Label>Comment</Form.Label>
-                    <Form.Control as='textarea' row='3' value={comment} onChange={(e)=>setComment(e.target.value)}></Form.Control>
-                  </Form.Group>
+                  <CustomTextArea
+                    id='comment' 
+                    name='comment' 
+                    labelText='Comment'  
+                    required 
+                    value={comment} 
+                    onChange={(e)=>setComment(e.target.value)}
+                  />
                   <Button type='submit' variant='primary'>Submit</Button>
                 </Form>
               ):(<Message>You must <Link to='/login'>sign in</Link> to leave a review.</Message>)}

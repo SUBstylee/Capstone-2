@@ -4,7 +4,9 @@ import {Form,Button,Row,Col} from 'react-bootstrap';
 import { useDispatch,useSelector } from "react-redux";
 import Message from "../../components/Message/Message";
 import Loader from '../../components/Loader/Loader';
+import CustomInput from "../../components/CustomInput/CustomInput";
 import {login} from '../../actions/userActions';
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import FormContainer from "../../components/FormContainer/FormContainer";
 
@@ -36,15 +38,10 @@ const Login = () => {
             <h1>Sign In</h1>
             {error&&<Message variant='danger'>{error}</Message>}
             {loading&&<Loader/>}
+            <MetaWrapper title='TAA-Login'/>
             <Form onSubmit={submitHandler}>
-                <Form.Group controlId='email'>
-                    <Form.Label>Email Address</Form.Label>    
-                    <Form.Control type='email' autoComplete="current-email" placeholder="Enter email" value={email} onChange={(e)=>setEmail(e.target.value)}></Form.Control>
-                </Form.Group>    
-                <Form.Group controlId='password'>
-                    <Form.Label>Password</Form.Label>    
-                    <Form.Control type='password' autoComplete="current-password" placeholder="Enter password" value={password} onChange={(e)=>setPassword(e.target.value)}></Form.Control>
-                </Form.Group>
+                <CustomInput id='email' type='email' autoComplete='current-email' name='email' labelText='Email Address' required={true} value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <CustomInput id='password' type='password' autoComplete='current-password' name='password' labelText='Password' required={true} value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 <Button className="my-2" type='submit' variant="primary">
                     Sign In
                 </Button>    

@@ -5,6 +5,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { savePaymentMethod } from "../../actions/cartActions";
 import FormContainer from "../../components/FormContainer/FormContainer";
 import CheckoutSteps from "../../components/CheckoutSteps/CheckoutSteps";
+import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
 
 import './Payment.scss'
 
@@ -26,6 +27,7 @@ const Payment = () => {
 
     return (
         <div className="Payment">
+            <MetaWrapper title='TAA-Payment'/>
             <FormContainer>
                 <CheckoutSteps step1 step2 step3/>
                 <h1>Payment Method</h1>
