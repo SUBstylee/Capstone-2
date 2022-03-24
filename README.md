@@ -1,4 +1,6 @@
-# Totally Awesome Apparel
+# <a href="https://totallyawesomeapparel.herokuapp.com/" target="_blank">Totally Awesome Apparel</a>
+
+
 
 ![TAA Header](./images/logos/TAA-header-color.png)
 
@@ -78,7 +80,7 @@ Photoshop and Illustrator were used to create and/or optimize images used on thi
 
 ---
 
-<!-- This app is currently deployed on Heroku at []() -->
+This app is currently deployed on Heroku at <a href="https://totallyawesomeapparel.herokuapp.com/" target="_blank">https://totallyawesomeapparel.herokuapp.com/</a>
 
 ## Developer
 
