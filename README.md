@@ -1,4 +1,4 @@
-# [Totally Awesome Apparel](https://totallyawesomeapparel.herokuapp.com/)
+# <a href="https://totallyawesomeapparel.herokuapp.com/" target="_blank">Totally Awesome Apparel</a>
 
 
 
@@ -80,7 +80,7 @@ Photoshop and Illustrator were used to create and/or optimize images used on thi
 
 ---
 
-This app is currently deployed on Heroku at [https://totallyawesomeapparel.herokuapp.com/](https://totallyawesomeapparel.herokuapp.com/)
+This app is currently deployed on Heroku at <a href="https://totallyawesomeapparel.herokuapp.com/" target="_blank">https://totallyawesomeapparel.herokuapp.com/</a>
 
 ## Developer
 
