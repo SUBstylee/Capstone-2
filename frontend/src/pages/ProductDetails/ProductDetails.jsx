@@ -9,6 +9,7 @@ import { listProductDetails,createProductReview } from "../../actions/productAct
 import { PRODUCT_CREATE_REVIEW_RESET } from "../../constants/productConstants";
 import CustomTextArea from "../../components/CustomTextArea/CustomTextArea";
 import MetaWrapper from "../../components/MetaWrapper/MetaWrapper";
+import './ProductDetails.scss';
 
 const ProductDetails = () => {
   const [qty,setQty]=useState(1);
@@ -158,7 +159,7 @@ const ProductDetails = () => {
                 <Form onSubmit={submitHandler}>
                   <Form.Group controlId="rating">
                     <Form.Label>Rating</Form.Label>
-                    <Form.Control as='select' required value={rating} onChange={(e)=>setRating(e.target.value)}>
+                    <Form.Control className="ratingSelect" as='select' required value={rating} onChange={(e)=>setRating(e.target.value)}>
                       <option value=''>Select a rating...</option>
                       <option value='1'>1 - Terrible</option>
                       <option value='2'>2 - Poor</option>
@@ -167,7 +168,7 @@ const ProductDetails = () => {
                       <option value='5'>5 - Great</option>
                     </Form.Control>
                   </Form.Group>
-                  <CustomTextArea
+                  <CustomTextArea style={{paddingTop:'20px'}}
                     id='comment' 
                     name='comment' 
                     labelText='Comment'  
