@@ -80,7 +80,10 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
 				Authorization: `Bearer ${userInfo.token}`,
 			},
 		};
-		await axios.delete(`/api/products/${id}`, config);
+		await axios.delete(
+			`https://tta-ec.onrender.com/api/products/${id}`,
+			config,
+		);
 		dispatch({
 			type: PRODUCT_DELETE_SUCCESS,
 		});
@@ -108,7 +111,11 @@ export const createProduct = () => async (dispatch, getState) => {
 				Authorization: `Bearer ${userInfo.token}`,
 			},
 		};
-		const { data } = await axios.post(`/api/products`, {}, config);
+		const { data } = await axios.post(
+			`https://tta-ec.onrender.com/api/products`,
+			{},
+			config,
+		);
 		dispatch({
 			type: PRODUCT_CREATE_SUCCESS,
 			payload: data,
@@ -139,7 +146,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.put(
-			`/api/products/${product._id}`,
+			`https://tta-ec.onrender.com/api/products/${product._id}`,
 			product,
 			config,
 		);
@@ -173,7 +180,11 @@ export const createProductReview =
 					Authorization: `Bearer ${userInfo.token}`,
 				},
 			};
-			await axios.post(`/api/products/${productId}/reviews`, review, config);
+			await axios.post(
+				`https://tta-ec.onrender.com/api/products/${productId}/reviews`,
+				review,
+				config,
+			);
 			dispatch({
 				type: PRODUCT_CREATE_REVIEW_SUCCESS,
 			});

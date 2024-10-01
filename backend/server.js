@@ -22,20 +22,22 @@ const app = express();
 
 //logs requests and status codes in development mode
 if (process.env.NODE_ENV === 'development') {
-    app.use(morgan('dev'));
-};
+	app.use(morgan('dev'));
+}
 
 app.use(cors());
 
 app.use(express.json());
 
-app.use('/api/products', productRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/upload', uploadRoutes);
-app.use("/api/config", paymentRoutes);
+app.use('https://tta-ec.onrender.com/api/products', productRoutes);
+app.use('https://tta-ec.onrender.com/api/users', userRoutes);
+app.use('https://tta-ec.onrender.com/api/orders', orderRoutes);
+app.use('https://tta-ec.onrender.com/api/upload', uploadRoutes);
+app.use('https://tta-ec.onrender.com/api/config', paymentRoutes);
 
-app.get('/api/config/paypal', (req, res) => res.send(process.env.PAYPAL_CLIENT_ID));
+app.get('https://tta-ec.onrender.com/api/config/paypal', (req, res) =>
+	res.send(process.env.PAYPAL_CLIENT_ID),
+);
 
 //must declare this variable to use in es6 modules
 const __dirname = path.resolve();
@@ -43,13 +45,15 @@ const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '/frontend/build')));
-    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')));
+	app.use(express.static(path.join(__dirname, '/frontend/build')));
+	app.get('*', (req, res) =>
+		res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')),
+	);
 } else {
-    app.get('/', (req, res) => {
-        res.send('API is running...');
-    });
-};
+	app.get('/', (req, res) => {
+		res.send('API is running...');
+	});
+}
 
 //make use of error handling middleware
 app.use(notFound);
@@ -57,4 +61,9 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.blue.bold));
+app.listen(
+	PORT,
+	console.log(
+		`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.blue.bold,
+	),
+);

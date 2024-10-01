@@ -35,7 +35,11 @@ export const createOrder = (order) => async (dispatch, getState) => {
 				Authorization: `Bearer ${userInfo.token}`,
 			},
 		};
-		const { data } = await axios.post('/api/orders', order, config);
+		const { data } = await axios.post(
+			'https://tta-ec.onrender.com/api/orders',
+			order,
+			config,
+		);
 		dispatch({
 			type: ORDER_CREATE_SUCCESS,
 			payload: data,
@@ -104,7 +108,7 @@ export const payOrder =
 				},
 			};
 			const { data } = await axios.put(
-				`/api/orders/${orderId}/pay`,
+				`https://tta-ec.onrender.com/api/orders/${orderId}/pay`,
 				paymentResult,
 				config,
 			);
@@ -137,7 +141,7 @@ export const deliverOrder = (order) => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.put(
-			`/api/orders/${order._id}/deliver`,
+			`https://tta-ec.onrender.com/api/orders/${order._id}/deliver`,
 			{},
 			config,
 		);
