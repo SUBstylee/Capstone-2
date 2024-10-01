@@ -122,7 +122,7 @@ export const getUserDetails = (id) => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.get(
-			`https://taa-nke7.onrender.com/api/users/${id}`,
+			`https://tta-ec.onrender.com/api/users/${id}`,
 			config,
 		);
 		dispatch({
@@ -189,7 +189,7 @@ export const listUsers = () => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.get(
-			'https://taa-nke7.onrender.com/api/users',
+			'https://tta-ec.onrender.com/api/users',
 			config,
 		);
 		dispatch({

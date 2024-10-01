@@ -70,7 +70,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.get(
-			`https://taa-nke7.onrender.com/api/orders/${id}`,
+			`https://tta-ec.onrender.com/api/orders/${id}`,
 			config,
 		);
 		dispatch({
@@ -170,7 +170,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.get(
-			'https://taa-nke7.onrender.com/api/orders/myorders',
+			'https://tta-ec.onrender.com/api/orders/myorders',
 			config,
 		);
 		dispatch({
@@ -202,7 +202,7 @@ export const listOrders = () => async (dispatch, getState) => {
 			},
 		};
 		const { data } = await axios.get(
-			'https://taa-nke7.onrender.com/api/orders',
+			'https://tta-ec.onrender.com/api/orders',
 			config,
 		);
 		dispatch({

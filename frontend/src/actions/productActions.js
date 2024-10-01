@@ -29,7 +29,7 @@ export const listProducts =
 		try {
 			dispatch({ type: PRODUCT_LIST_REQUEST });
 			const { data } = await axios.get(
-				`https://taa-nke7.onrender.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`,
+				`https://tta-ec.onrender.com/api/products?keyword=${keyword}&pageNumber=${pageNumber}`,
 			);
 			dispatch({
 				type: PRODUCT_LIST_SUCCESS,
@@ -50,7 +50,7 @@ export const listProductDetails = (id) => async (dispatch) => {
 	try {
 		dispatch({ type: PRODUCT_DETAILS_REQUEST });
 		const { data } = await axios.get(
-			`https://taa-nke7.onrender.com/api/products/${id}`,
+			`https://tta-ec.onrender.com/api/products/${id}`,
 		);
 		dispatch({
 			type: PRODUCT_DETAILS_SUCCESS,
@@ -192,7 +192,7 @@ export const listTopProducts = () => async (dispatch) => {
 	try {
 		dispatch({ type: PRODUCT_TOP_REQUEST });
 		const { data } = await axios.get(
-			`https://taa-nke7.onrender.com/api/products/top`,
+			`https://tta-ec.onrender.com/api/products/top`,
 		);
 		dispatch({
 			type: PRODUCT_TOP_SUCCESS,
