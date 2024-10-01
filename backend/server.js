@@ -29,13 +29,13 @@ app.use(cors());
 
 app.use(express.json());
 
-app.use('https://tta-ec.onrender.com/api/products', productRoutes);
-app.use('https://tta-ec.onrender.com/api/users', userRoutes);
-app.use('https://tta-ec.onrender.com/api/orders', orderRoutes);
-app.use('https://tta-ec.onrender.com/api/upload', uploadRoutes);
-app.use('https://tta-ec.onrender.com/api/config', paymentRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/upload', uploadRoutes);
+app.use('/api/config', paymentRoutes);
 
-app.get('https://tta-ec.onrender.com/api/config/paypal', (req, res) =>
+app.get('/api/config/paypal', (req, res) =>
 	res.send(process.env.PAYPAL_CLIENT_ID),
 );
 
